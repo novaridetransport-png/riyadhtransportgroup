@@ -1,9 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans_Arabic, Manrope } from "next/font/google";
-import { SiteFooter } from "@/components/footer/site-footer";
-import { SiteHeader } from "@/components/layout/site-header";
 import { site } from "@/config/site";
-import { JsonLd, organizationLd } from "@/lib/seo/jsonld";
 import "./globals.css";
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-manrope", display: "swap" });
@@ -25,10 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-3 focus:font-semibold focus:text-navy">
           Skip to content
         </a>
-        <SiteHeader />
-        <main id="main" tabIndex={-1} className="flex-1 outline-none">{children}</main>
-        <SiteFooter />
-        <JsonLd data={organizationLd} />
+        {children}
       </body>
     </html>
   );

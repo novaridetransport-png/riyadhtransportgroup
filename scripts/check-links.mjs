@@ -31,6 +31,7 @@ for (const [path, entry] of Object.entries(registry)) {
   if (new URL(canonical ?? "about:blank").href !== origin + path) errors.push(`${path} canonical is ${canonical}`);
   if (!html.includes('property="og:title"')) errors.push(`${path} has no Open Graph title`);
   if (/name="robots" content="[^"]*noindex/.test(html) === (indexing && entry.index)) errors.push(`${path} robots does not match the registry`);
+  if ((html.match(/<footer[ >]/g) ?? []).length !== 1 || !html.includes('id="mobile-menu"')) errors.push(`${path} is missing the site header or footer`);
   const h1s = [...html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/g)].map((m) => m[1]);
   if (h1s.length !== 1) errors.push(`${path} must have exactly one h1`);
   unique("title", html.match(/<title>([^<]+)/)?.[1], path);
