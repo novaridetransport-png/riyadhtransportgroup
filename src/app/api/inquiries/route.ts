@@ -28,26 +28,34 @@ export async function POST(request: Request) {
   if (!parsed.success) return reply(400, "invalid");
   const b = parsed.data;
 
-  try {
-    // Repeating the same id (double click, retry) does not create a second row.
-    const res = await fetch(new URL("/rest/v1/inquiries?on_conflict=id&select=id", SUPABASE_URL), {
-      method: "POST",
-      headers: { apikey: SUPABASE_SECRET_KEY, "Content-Type": "application/json", Prefer: "resolution=ignore-duplicates,return=representation" },
-      body: JSON.stringify({
-        id: outer.data.id, pickup: b.pickup, destination: b.destination, trip_type: b.tripType, travel_date: b.date,
-        return_date: b.tripType === "return" ? b.returnDate : null, pickup_time: b.time, passengers: b.passengers,
-        luggage: b.luggage, vehicle: b.vehicle, name: b.name, phone: b.phone, email: b.email || null, notes: b.notes || null,
-      }),
-      signal: AbortSignal.timeout(10_000),
-    });
-    if (res.ok) {
+  const row = JSON.stringify({
+    id: outer.data.id, pickup: b.pickup, destination: b.destination, trip_type: b.tripType, travel_date: b.date,
+    return_date: b.tripType === "return" ? b.returnDate : null, pickup_time: b.time, passengers: b.passengers,
+    luggage: b.luggage, vehicle: b.vehicle, name: b.name, phone: b.phone, email: b.email || null, notes: b.notes || null,
+  });
+  // The id makes inserts repeatable: if a reply is lost after the row was stored, the
+  // second attempt finds it instead of failing, and the owner is still notified.
+  let replyLost = false;
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    try {
+      const res = await fetch(new URL("/rest/v1/inquiries?on_conflict=id&select=id", SUPABASE_URL), {
+        method: "POST",
+        headers: { apikey: SUPABASE_SECRET_KEY, "Content-Type": "application/json", Prefer: "resolution=ignore-duplicates,return=representation" },
+        body: row,
+        signal: AbortSignal.timeout(8_000),
+      });
+      if (!res.ok) {
+        console.error("Inquiry insert failed with status", res.status); // never log personal data
+        if (res.status < 500) break;
+        continue;
+      }
       const created = ((await res.json()) as unknown[]).length === 1; // empty when the id already existed
-      if (created) await notifyNewInquiry({ id: outer.data.id, pickup: b.pickup, destination: b.destination, date: b.date, time: b.time });
+      if (created || replyLost) await notifyNewInquiry({ id: outer.data.id, pickup: b.pickup, destination: b.destination, date: b.date, time: b.time });
       return reply(201);
+    } catch (error) {
+      replyLost = true;
+      console.error("Inquiry insert attempt failed:", error instanceof Error ? error.name : "unknown");
     }
-    console.error("Inquiry insert failed with status", res.status); // never log personal data
-  } catch {
-    console.error("Inquiry insert failed: network");
   }
   return reply(502, "storage");
 }

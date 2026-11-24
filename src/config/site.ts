@@ -16,7 +16,8 @@ export const site = {
     /** E.164, used for tel: links and structured data */
     phone: contactEnabled ? "+966574205462" : null,
     phoneDisplay: contactEnabled ? "+966 57 420 5462" : null,
-    email: null as string | null,
+    /** General contact. New inquiries are sent to booking@ (NOTIFY_TO_EMAIL). */
+    email: contactEnabled ? "info@riyadhtransportgroup.com" : null,
   },
   /** Search engines may index the site. Off until launch sign-off: every page is noindex and the sitemap is empty. */
   indexingEnabled: process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true",
