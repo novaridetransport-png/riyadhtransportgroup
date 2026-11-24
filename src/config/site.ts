@@ -1,5 +1,8 @@
 import { isPublished } from "./urls";
 
+/** Call and WhatsApp links. Off until licensing and the privacy notice are settled. */
+const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED === "true";
+
 /** Business facts. `null` means "not supplied or verified": the UI hides it. */
 export const site = {
   name: "Riyadh Transport Group",
@@ -11,10 +14,10 @@ export const site = {
   operatingModel: "Transportation is arranged through independent drivers and transport partners.",
   contact: {
     /** International format, digits only, e.g. "9665XXXXXXXX" */
-    whatsapp: "966574205462" as string | null,
+    whatsapp: contactEnabled ? "966574205462" : null,
     /** E.164, used for tel: links and structured data */
-    phone: "+966574205462" as string | null,
-    phoneDisplay: "+966 57 420 5462",
+    phone: contactEnabled ? "+966574205462" : null,
+    phoneDisplay: contactEnabled ? "+966 57 420 5462" : null,
     email: null as string | null,
   },
   /**

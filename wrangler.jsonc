@@ -1,9 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "riyadh-transport-group",
-  "main": ".open-next/worker.js",
+  "name": "riyadhtransportgroup",
+  "main": "worker.ts",
   "compatibility_date": "2026-11-01",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
   "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "routes": [
+    { "pattern": "riyadhtransportgroup.com", "custom_domain": true },
+    { "pattern": "www.riyadhtransportgroup.com", "custom_domain": true }
+  ],
   "images": { "binding": "IMAGES" }
 }
