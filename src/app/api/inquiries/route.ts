@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { site } from "@/config/site";
+import { formSubmissionsEnabled } from "@/config/flags";
 import { bookingFormSchema } from "@/lib/validation/booking";
 
 const MAX_BYTES = 10_000;
@@ -9,7 +9,7 @@ const reply = (status: number, error?: string) =>
 
 export async function POST(request: Request) {
   const { SUPABASE_URL, SUPABASE_SECRET_KEY } = process.env;
-  if (!site.formSubmissionsEnabled || !SUPABASE_URL || !SUPABASE_SECRET_KEY) return reply(503, "unavailable");
+  if (!formSubmissionsEnabled || !SUPABASE_URL || !SUPABASE_SECRET_KEY) return reply(503, "unavailable");
 
   const origin = request.headers.get("origin");
   if (!origin || !URL.canParse(origin) || new URL(origin).host !== request.headers.get("host")) return reply(403, "forbidden");

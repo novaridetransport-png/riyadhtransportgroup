@@ -3,12 +3,12 @@
 import { Check, Copy, Send } from "lucide-react";
 import { useState } from "react";
 import { buttonClass } from "@/components/ui/button-class";
-import { site } from "@/config/site";
+import { formSubmissionsEnabled } from "@/config/flags";
 import { bookingSummary, type BookingInput } from "@/lib/validation/booking";
 
 /** Success is shown only after the server confirms that the inquiry was stored. */
 export function BookingReview({ booking, headingRef, onEdit }: { booking: BookingInput; headingRef: React.Ref<HTMLHeadingElement>; onEdit: () => void }) {
-  const enabled = site.formSubmissionsEnabled;
+  const enabled = formSubmissionsEnabled;
   const [id] = useState(() => crypto.randomUUID());
   const [website, setWebsite] = useState("");
   const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");

@@ -1,5 +1,3 @@
-import { isPublished } from "./urls";
-
 /** Call and WhatsApp links. Off until licensing and the privacy notice are settled. */
 const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED === "true";
 
@@ -20,11 +18,6 @@ export const site = {
     phoneDisplay: contactEnabled ? "+966 57 420 5462" : null,
     email: null as string | null,
   },
-  /**
-   * Lets the booking form store inquiries in Supabase. Needs the environment switch
-   * AND a published privacy page, so data can never be collected without a notice.
-   */
-  formSubmissionsEnabled: process.env.NEXT_PUBLIC_FORM_SUBMISSIONS_ENABLED === "true" && isPublished("/privacy-policy/"),
   /** Search engines may index the site. Off until launch sign-off: every page is noindex and the sitemap is empty. */
   indexingEnabled: process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true",
   social: [] as { label: string; href: string }[],

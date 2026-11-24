@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import { useForm, useWatch, type FieldPath } from "react-hook-form";
 import { buttonClass } from "@/components/ui/button-class";
-import { site } from "@/config/site";
+import { formSubmissionsEnabled } from "@/config/flags";
 import { linkFor } from "@/config/urls";
 import { cn } from "@/lib/utils/cn";
 import { bookingFormSchema, riyadhToday, type BookingInput } from "@/lib/validation/booking";
@@ -84,7 +84,7 @@ export function BookingForm({ places, vehicles, pickup = "Riyadh", destination =
       </div>
       <p className="mt-4 text-sm text-muted">Step {step + 1} of {steps.length}</p>
       <h2 ref={heading} tabIndex={-1} className="text-xl text-navy outline-none">{steps[step].title}</h2>
-      {!site.formSubmissionsEnabled && <p className="mt-2 text-sm">Online requests are not open yet. You can prepare your details here; nothing is sent.</p>}
+      {!formSubmissionsEnabled && <p className="mt-2 text-sm">Online requests are not open yet. You can prepare your details here; nothing is sent.</p>}
       {privacy && <p className="mt-2 text-sm">Read the <a href={privacy} className="font-semibold text-royal underline underline-offset-4">privacy policy</a> before entering your details.</p>}
 
       <div className={panel(0)}>
