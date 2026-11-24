@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { formSubmissionsEnabled } from "@/config/flags";
+import { notifyNewInquiry } from "@/lib/email/notify";
 import { bookingFormSchema } from "@/lib/validation/booking";
 
 const MAX_BYTES = 10_000;
@@ -29,9 +30,9 @@ export async function POST(request: Request) {
 
   try {
     // Repeating the same id (double click, retry) does not create a second row.
-    const res = await fetch(new URL("/rest/v1/inquiries?on_conflict=id", SUPABASE_URL), {
+    const res = await fetch(new URL("/rest/v1/inquiries?on_conflict=id&select=id", SUPABASE_URL), {
       method: "POST",
-      headers: { apikey: SUPABASE_SECRET_KEY, "Content-Type": "application/json", Prefer: "resolution=ignore-duplicates,return=minimal" },
+      headers: { apikey: SUPABASE_SECRET_KEY, "Content-Type": "application/json", Prefer: "resolution=ignore-duplicates,return=representation" },
       body: JSON.stringify({
         id: outer.data.id, pickup: b.pickup, destination: b.destination, trip_type: b.tripType, travel_date: b.date,
         return_date: b.tripType === "return" ? b.returnDate : null, pickup_time: b.time, passengers: b.passengers,
@@ -39,7 +40,11 @@ export async function POST(request: Request) {
       }),
       signal: AbortSignal.timeout(10_000),
     });
-    if (res.ok) return reply(201);
+    if (res.ok) {
+      const created = ((await res.json()) as unknown[]).length === 1; // empty when the id already existed
+      if (created) await notifyNewInquiry({ id: outer.data.id, pickup: b.pickup, destination: b.destination, date: b.date, time: b.time });
+      return reply(201);
+    }
     console.error("Inquiry insert failed with status", res.status); // never log personal data
   } catch {
     console.error("Inquiry insert failed: network");
