@@ -3,7 +3,7 @@ const reasons = [
   ["No shared rides", "Only you and the people you travel with."],
   ["Direct booking coordination", "Your pickup details are arranged with you before travel."],
   ["Flexible vehicle options", "From a sedan for one to a van for the family."],
-  ["Saudi and GCC route knowledge", "Planning shaped around the road and the border crossing."],
+  ["Saudi and GCC route planning", "Planning shaped around the road and the border crossing."],
   ["Clear booking communication", "Vehicle and fare set out before you confirm."],
 ];
 

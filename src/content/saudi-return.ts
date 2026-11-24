@@ -2,38 +2,37 @@ import { list, note, points, prose, steps, vehicleOptions, type RouteContent } f
 
 export const saudiReturn = {
   "/saudi-arabia/dammam-to-riyadh/": {
-    title: "Dammam to Riyadh Taxi Alternative | Private Car",
-    description: "Private car from Dammam to Riyadh, collected from home, the port, an office or King Fahd Airport. Direct to your address. Get a quote.",
+    title: "Dammam to Riyadh Private Car | Request a Quote",
+    description: "Private car from Dammam to Riyadh, collected from an agreed address. Direct to your address. Get a quote.",
     h1: "Dammam to Riyadh by private car",
     intro: [
-      "Landing at King Fahd International with a meeting in Riyadh, finishing a shift at an industrial site, or taking the family to the capital for a hospital visit: the start point sets the plan.",
-      "Your driver comes to it, and the next stop is your address in Riyadh.",
+      "Finishing a shift at an industrial site, or taking the family to the capital for a hospital visit: the start point sets the plan.",
+      "If confirmed, an independent driver meets you at the agreed point.",
     ],
     opposite: "Going the other way?",
     blocks: [
       points("Pickup points, and what we need for each", [
         ["Homes and hotels", "District, pin and a phone number that will be answered."],
-        ["King Fahd International Airport", "Flight number and number of checked bags. Agree a meeting point, since customs time varies."],
         ["Port and industrial gates", "The gate name, plus a contact inside who can bring passengers out."],
         ["Dammam railway station", "Arrival time and the side of the station you will use."],
       ]),
       prose("Arriving in Riyadh",
         "The expressway reaches Riyadh from the east. Addresses in the north and east are convenient; Diriyah, the Diplomatic Quarter and southern districts mean crossing the city.",
         "Weekday mornings are the hardest time to enter. For a nine o'clock appointment, an overnight stay or a pre-dawn start is wiser than hoping for clear roads."),
-      vehicleOptions("Select a vehicle", "Airport arrivals should count every checked bag.", {
+      vehicleOptions("Select a vehicle", "Count every large bag.", {
         sedan: "Solo travellers and pairs.",
         suv: "Arriving families or workers with tool bags.",
         gmc: "Visiting directors and clients.",
         van: "Crew changes and group arrivals.",
       }),
       steps("Booking from the Eastern Province",
-        ["Tell us where you start", "Include a flight number if you are landing."],
+        ["Tell us where you start", "A pin and a contact number."],
         ["Name the Riyadh district", "It affects the final hour of the drive."],
         ["Approve vehicle and fare", "Nothing is booked before that."],
         ["Meet your driver", "At the agreed point."]),
     ],
     faqs: [
-      ["What if my flight to Dammam is late?", "Give the flight number so the pickup can be adjusted where possible. How waiting is charged will be in your quote."],
+      ["Do you collect from King Fahd International Airport?", "Airport pickup is not confirmed. Please ask before planning around it."],
       ["Can you drop passengers at two Riyadh addresses?", "Yes, when both are listed in the inquiry."],
       ["Can I travel at night?", "Ask for the time you want. Night driving depends on driver availability and rest."],
     ],
@@ -65,7 +64,6 @@ export const saudiReturn = {
         ["Corniche hotels", "Ask reception where cars may wait."],
         ["Half Moon Bay and Aziziyah", "Give the resort gate and unit number."],
         ["Dhahran campuses and compounds", "Meet at the visitor gate unless the vehicle has been cleared."],
-        ["The Saudi side of the causeway", "Only if you arrive from Bahrain by other means. A through transfer is simpler."],
       ]),
       vehicleOptions("Space for the return", "People come home with more than they took.", {
         sedan: "Business travellers with one bag each.",
@@ -81,9 +79,9 @@ export const saudiReturn = {
         ["Confirm the quote", "Vehicle and fare in one message."]),
     ],
     faqs: [
-      ["Can I book the return when I book the outward trip?", "Yes. Select Return in the form. It helps secure a weekend slot."],
+      ["Can I book the return when I book the outward trip?", "You can select Return. Available on request and subject to driver and partner confirmation."],
       ["Can two families split one van?", "If you book together as one party, yes. We do not combine strangers."],
-      ["Can I be dropped at Riyadh airport?", "Name King Khalid International as the destination with your flight time, and it will be considered in the quote."],
+      ["Can I be dropped at Riyadh airport?", "Airport drop-off in Riyadh is not confirmed. Please ask before planning around it."],
     ],
     links: [
       ["/saudi-arabia/dammam-to-riyadh/", "Pickups in Dammam itself"],
@@ -104,7 +102,7 @@ export const saudiReturn = {
     opposite: "Arranging a visit to the region?",
     blocks: [
       points("Common reasons for the trip", [
-        ["Medical referral", "Send the hospital, building and appointment time. Ask for waiting if you will return the same day."],
+        ["Medical referral", "Send the hospital, building and appointment time. Waiting and same-day return: available on request and subject to driver and partner confirmation."],
         ["Embassy or visa centre", "These are strict about arrival times and about bags. Plan where luggage stays."],
         ["University move-in", "Count boxes and bedding along with suitcases."],
         ["International departure", "Give the flight time and terminal, and let the pickup be calculated from there."],
@@ -118,10 +116,10 @@ export const saudiReturn = {
       prose("On the way",
         "The route gathers on Highway 65 and runs south-east past Al Ghat and Al Majma'ah to Riyadh. Travellers from the south-west of the region have further to go before reaching it.",
         "Riyadh's northern approach is busy on weekday mornings, exactly when most appointments begin."),
-      vehicleOptions("Vehicles to consider", "Patients and students have opposite needs: one wants space to rest, the other space for boxes.", {
+      vehicleOptions("Vehicles to consider", "Consider space to sit comfortably as well as space for boxes.", {
         sedan: "A single traveller with an appointment.",
         suv: "Student moves and small families.",
-        gmc: "Patients who need to recline or stretch.",
+        gmc: "Passengers who prefer more space.",
         van: "Relatives collected from more than one house.",
       }),
       steps("Next steps",
@@ -130,7 +128,7 @@ export const saudiReturn = {
         ["Receive a fare", "Covering the full route."]),
     ],
     faqs: [
-      ["Can you come to a farm outside town?", "Usually, if the road is passable. Send a pin and describe the track."],
+      ["Can you come to a farm outside town?", "Send a pin. Available on request and subject to driver and partner confirmation."],
       ["Will the driver help an older passenger?", "Tell us what help is needed. Drivers are not medical staff, so a relative should accompany anyone who needs care."],
       ["What if an appointment runs over?", "Share an upper limit when booking. Extra waiting may change the fare, on the terms in your quote."],
     ],
@@ -144,7 +142,7 @@ export const saudiReturn = {
 
   "/saudi-arabia/buraydah-to-riyadh/": {
     title: "Buraydah to Riyadh Private Car | Business & Medical Trips",
-    description: "Private car from Buraydah to Riyadh for business days, medical visits and flights, with an optional same-day return. Request a fare.",
+    description: "Private car from Buraydah to Riyadh for business days, medical visits and flights, with same-day return on request, subject to confirmation.",
     h1: "Buraydah to Riyadh, there and back in a day",
     intro: [
       "Buraydah's traders and professionals often need the capital for one working day. With a driver, the time on the road becomes time for calls, reading or sleep.",
@@ -156,7 +154,7 @@ export const saudiReturn = {
         ["Fix the first meeting", "It decides the departure, usually before dawn."],
         ["List the other stops", "With districts. Cross-city hops take time."],
         ["Set an end time", "So the driver's hours can be planned legally and safely."],
-        ["Receive one fare", "For the complete day, not per stop."]),
+        ["Review the fare", "With the basis explained before you book."]),
       prose("Why not simply drive yourself?",
         "You can, and many do. A driver earns their place when you have to work before arriving, when parking near ministries or hospitals is scarce, or when a return at night after a full day would be unsafe."),
       points("Riyadh destinations to specify", [
@@ -176,7 +174,7 @@ export const saudiReturn = {
     faqs: [
       ["Can you issue a company invoice?", "Ask in your inquiry. The available documentation will be confirmed with the quote."],
       ["Is an overnight stay cheaper than a same-day return?", "It depends on how long the driver would wait. Request both options and compare."],
-      ["Can I change stops during the day?", "Small changes are often possible by agreement, and may affect the fare."],
+      ["Can I change stops during the day?", "Available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/services/business-transportation/", "Multi-stop business days"],
@@ -200,7 +198,6 @@ export const saudiReturn = {
         ["Term start", "Book the week before. Many families make the same trip."],
         ["Luggage", "List mattresses, fridges or bicycles. Some will need a van."],
         ["Campus access", "Find out which gate takes drop-offs on arrival day."],
-        ["Travelling alone", "A parent may book and share the agreed contact details with the student."],
       ]),
       prose("For families returning home",
         "The road joins the main Qassim–Riyadh highway and enters Riyadh from the north. At the end of a holiday the final approach is usually the slowest part.",
@@ -225,7 +222,7 @@ export const saudiReturn = {
     faqs: [
       ["Can a student be dropped at university housing?", "Yes, at the gate permitted for visitors' vehicles."],
       ["Can we share with another family from Unaizah?", "If you arrange it between yourselves and book as one group. We do not match unrelated passengers."],
-      ["Can the car take us to a Riyadh flight?", "Yes. Provide the departure time so the pickup allows for traffic and check-in."],
+      ["Can the car take us to a Riyadh flight?", "Airport drop-off: available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/saudi-arabia/buraydah-to-riyadh/", "Departures from Buraydah"],
@@ -252,7 +249,7 @@ export const saudiReturn = {
       ]),
       prose("Leaving the city",
         "Jeddah stretches along the coast, and a pickup in Obhur is a very different start from one in the south. Send a pin early.",
-        "Non-Muslim passengers must travel outside the Makkah sanctuary boundary. Tell us when you inquire, so that the appropriate road to Taif is used."),
+        "Only Muslims may enter the Sacred Area of Makkah. Routes must comply with current Saudi regulations and are confirmed before booking."),
       list("For relocations", [
         "Measure your largest item before choosing a category",
         "Keep documents, jewellery and electronics with you",
@@ -269,10 +266,10 @@ export const saudiReturn = {
         ["Pick a pace", "Direct or overnight."],
         ["Send addresses", "Both ends, with floor and access notes for heavy luggage."],
         ["Compare quotes", "Ask for two categories if unsure."],
-        ["Depart", "With stops already agreed."]),
+        ["Depart", "With any confirmed stops."]),
     ],
     faqs: [
-      ["Can I be picked up at Jeddah airport?", "Yes, subject to confirmation. Share your flight number and terminal, as terminal assignments at JED have been changing."],
+      ["Can I be picked up at Jeddah airport?", "Jeddah airport pickup is not confirmed. Please ask before planning around it."],
       ["Who pays for the driver's overnight stay?", "If an overnight is part of the plan, the quote will state what it includes."],
       ["Is it safe to drive at night?", "We recommend daylight for the mountain section near Taif and a rested driver throughout."],
     ],
@@ -290,7 +287,7 @@ export const saudiReturn = {
     h1: "Makkah to Riyadh after Umrah",
     intro: [
       "After days of walking and little sleep, the drive home should ask nothing of you.",
-      "A private vehicle collects your family near the hotel, carries the bags and lets everyone rest on the way to Riyadh.",
+      "Request a pickup at a lawful, accessible point. Available on request and subject to driver and partner confirmation.",
     ],
     opposite: "Still planning your Umrah?",
     blocks: [
@@ -299,7 +296,7 @@ export const saudiReturn = {
         ["Choose a meeting point", "Some hotels have no vehicle access at busy times. Reception will know the usual spot."],
         ["Bring bags down together", "Curbside waiting is limited."],
         ["Stay reachable", "Mobile networks are crowded, so agree a fallback location."]),
-      note("Pickups in Makkah", "The same entry rules apply to vehicles and drivers collecting passengers as to pilgrims. During the Hajj period access is restricted, so pickups depend on the permissions in force on the day."),
+      note("Pickups in Makkah", "Drivers and passengers must meet the access rules in force. Saudi authorities may restrict entry at certain times. Check current Ministry of Interior announcements. A pickup is not guaranteed."),
       points("What to mention", [
         ["Zamzam water", "Containers are heavy and must be well sealed. Say how many."],
         ["Wheelchairs", "Folding or powered, so boot space can be checked."],
@@ -313,7 +310,7 @@ export const saudiReturn = {
         van: "Groups with Zamzam and shopping.",
       }),
       prose("The road to Riyadh",
-        "The route climbs to Taif and then heads east on Highway 40. Vehicles leave through the checkpoints around Makkah. Daytime departures make the ascent easier, and an overnight stop is worth considering for young children."),
+        "The route climbs to Taif and then heads east on Highway 40. Daytime departures make the ascent easier, and an overnight stop is worth considering for young children."),
       steps("Booking your return",
         ["Send hotel and checkout date", "With your Riyadh address for the drop-off."],
         ["List passengers and loads", "Bags, Zamzam and wheelchairs."],
@@ -322,8 +319,8 @@ export const saudiReturn = {
     ],
     faqs: [
       ["Can the driver come up to our hotel room?", "No. Please use hotel porters and meet at the agreed point."],
-      ["Can we visit Taif for a few hours?", "Yes, include it in the request so that waiting is part of the fare."],
-      ["Can you collect from Aziziyah or other districts?", "Yes. Districts away from the Haram are often easier for vehicles."],
+      ["Can we visit Taif for a few hours?", "A Taif stop: available on request and subject to driver and partner confirmation."],
+      ["Can you collect from Aziziyah or other districts?", "Ask with the district and date. Available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/saudi-arabia/madinah-to-riyadh/", "Ending your visit in Madinah"],
@@ -335,10 +332,10 @@ export const saudiReturn = {
 
   "/saudi-arabia/madinah-to-riyadh/": {
     title: "Madinah to Riyadh Private Car | Hotel to Home",
-    description: "Private car from your Madinah hotel to your Riyadh home, travelling by Qassim with meals and prayer stops agreed in advance.",
+    description: "Private car from your Madinah hotel to your Riyadh home, travelling by Qassim with stops on request, subject to confirmation.",
     h1: "Madinah to Riyadh, hotel to home",
     intro: [
-      "The eastbound drive begins with its emptiest section. Leaving Madinah, the towns are far apart until Qassim, after which services are frequent all the way to Riyadh.",
+      "The eastbound drive is long. Plan fuel, meals and rest before leaving Madinah, and think about a break in Qassim.",
       "That order shapes everything: when to leave, when to eat and when to stop for the night.",
     ],
     opposite: "Travelling to Madinah?",
@@ -357,7 +354,7 @@ export const saudiReturn = {
       ]),
       prose("Road notes",
         "Highway 60 links Madinah with Qassim, where it meets Highway 65 for the run south-east to Riyadh. Both are main roads, but fuel and food stops on the first should be planned rather than left to chance."),
-      vehicleOptions("Suitable vehicles", "The quieter first leg makes reliable space and comfort important.", {
+      vehicleOptions("Suitable vehicles", "Choose for comfort over a long drive.", {
         sedan: "Two travellers.",
         suv: "Families with luggage and groceries.",
         gmc: "Older passengers on a full-day drive.",
@@ -370,7 +367,7 @@ export const saudiReturn = {
         ["Travel", "Home to your door in Riyadh."]),
     ],
     faqs: [
-      ["Can we start at Madinah airport or station?", "Name it as the pickup with your arrival time. Availability is confirmed with the quote."],
+      ["Can we start at Madinah airport or station?", "Airport pickup at Madinah is not confirmed. Ask about other pickups; they are subject to confirmation."],
       ["Where is the best place to stop overnight?", "Buraydah and Unaizah both have hotels and are close to the point where the route turns towards Riyadh."],
       ["Can dates and gifts be carried?", "Yes, within the vehicle's space. Include boxes in the luggage count."],
     ],

@@ -36,7 +36,7 @@ export interface PageEntry {
 const page = (label: string, type: PageType, status: PageStatus = "published", index = true): PageEntry => ({ label, type, status, index });
 const main = (label: string, status: PageStatus = "planned", index = true) => page(label, "main", status, index);
 const vehicle = (label: string) => page(label, "vehicle", "planned");
-const airport = (label: string, status: PageStatus = "unconfirmed") => page(label, "airport", status);
+const airport = (label: string) => page(label, "airport", "unconfirmed");
 const reserved = (label: string) => page(label, "directory", "unconfirmed");
 const out = (destination: string, country: Country = "Saudi Arabia"): PageEntry => ({
   ...page(`Riyadh to ${destination}`, "route"), route: { origin: "Riyadh", destination, country, direction: "outbound" },
@@ -50,7 +50,7 @@ export const registry = {
   "/": main("Home", "published"),
   "/about-us/": main("About Us"),
   "/contact-us/": main("Contact Us"),
-  "/vehicles/": main("Our Vehicles"),
+  "/vehicles/": main("Vehicle Categories"),
   "/faqs/": main("Frequently Asked Questions"),
   "/book-transport/": main("Book Your Ride", "published", false),
   "/privacy-policy/": main("Privacy Policy"),
@@ -61,7 +61,8 @@ export const registry = {
   "/services/": page("All Services", "service"),
   "/services/private-transportation/": page("Private Transportation", "service"),
   "/services/intercity-transfers/": page("Intercity Transfers", "service"),
-  "/services/airport-transfers/": page("Airport Transfers", "service"),
+  // noindex until at least one airport is confirmed
+  "/services/airport-transfers/": page("Airport Transfers", "service", "published", false),
   "/services/business-transportation/": page("Business Transportation", "service"),
   "/services/family-transportation/": page("Family Transportation", "service"),
 
@@ -108,9 +109,9 @@ export const registry = {
 
   // Airports (publish only after coverage is confirmed)
   "/services/airport-transfers/riyadh-airport/": airport("Riyadh Airport (RUH)"),
-  "/services/airport-transfers/dammam-airport/": airport("Dammam Airport (DMM)", "published"),
+  "/services/airport-transfers/dammam-airport/": airport("Dammam Airport (DMM)"),
   "/services/airport-transfers/qassim-airport/": airport("Qassim Airport (ELQ)"),
-  "/services/airport-transfers/jeddah-airport/": airport("Jeddah Airport (JED)", "published"),
+  "/services/airport-transfers/jeddah-airport/": airport("Jeddah Airport (JED)"),
   "/services/airport-transfers/madinah-airport/": airport("Madinah Airport (MED)"),
   "/services/airport-transfers/bahrain-airport/": airport("Bahrain Airport (BAH)"),
   "/services/airport-transfers/doha-airport/": airport("Doha Airport (DOH)"),

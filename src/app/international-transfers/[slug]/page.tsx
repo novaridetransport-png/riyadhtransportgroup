@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { BorderNotice } from "@/components/routes/border-notice";
 import { ContentPage } from "@/components/routes/content-page";
-import { isPublished, type InternationalRoutePath } from "@/config/urls";
+import { getPage, isPublished, type InternationalRoutePath } from "@/config/urls";
 import { internationalRoutes } from "@/content/international-routes";
 import { pageMetadata } from "@/lib/seo/metadata";
 
@@ -24,5 +25,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { path, content } = await resolve(params);
-  return <ContentPage path={path} content={content} opposite={content.opposite} />;
+  return <ContentPage path={path} content={content} opposite={content.opposite}><BorderNotice enteringSaudi={getPage(path).route?.direction === "return"} /></ContentPage>;
 }

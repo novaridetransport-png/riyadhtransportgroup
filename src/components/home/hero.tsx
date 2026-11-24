@@ -8,7 +8,7 @@ import { placeSuggestions } from "@/config/routes";
 import { vehicles } from "@/config/vehicles";
 import { RouteMap } from "./route-map";
 
-const highlights = ["Private vehicle, no shared rides", "Door-to-door pickup and drop-off", "Fare confirmed before you book"];
+const highlights = ["Private vehicle, no shared rides", "Door-to-door pickup and drop-off", "Fare shared for your approval before booking"];
 
 export function Hero() {
   return (
@@ -23,7 +23,7 @@ export function Hero() {
         <div>
           <h1 className="text-hero">Private Transportation from Riyadh to Saudi Arabia &amp; Beyond</h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">
-            Discover reliable private transfers from Riyadh to major Saudi cities and GCC destinations. Travel directly with professionally coordinated transportation.
+            Request private transfers from Riyadh to major Saudi cities and GCC destinations. Journeys are arranged through independent drivers and transport partners.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <ButtonLink href="/book-transport/">Book Your Ride</ButtonLink>

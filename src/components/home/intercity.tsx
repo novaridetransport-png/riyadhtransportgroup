@@ -18,7 +18,7 @@ export function Intercity() {
           <dl className="mt-8 space-y-5">
             <div><dt className="font-bold text-navy">Eastern Province</dt><dd>Dammam and Khobar, for business, family visits and onward travel.</dd></div>
             <div><dt className="font-bold text-navy">Qassim</dt><dd>Buraydah and Unaizah, to your exact address.</dd></div>
-            <div><dt className="font-bold text-navy">Western Saudi Arabia</dt><dd>Long-distance journeys to Jeddah, Makkah and Madinah.</dd></div>
+            <div><dt className="font-bold text-navy">Western Saudi Arabia</dt><dd>Long-distance journeys to Jeddah and Madinah, and to Makkah for eligible passengers, subject to current Saudi regulations.</dd></div>
           </dl>
           <div className="mt-9"><ButtonLink href="/services/intercity-transfers/" variant="secondary">Explore intercity transfers</ButtonLink></div>
         </div>

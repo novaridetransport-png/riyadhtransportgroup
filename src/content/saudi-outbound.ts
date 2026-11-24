@@ -7,7 +7,7 @@ export const saudiOutbound = {
     h1: "Riyadh to Dammam private transfer",
     intro: [
       "Dammam is the working capital of the Eastern Province, and most trips there are for a reason: a site visit, a shipment at the port, a family home, a flight out of King Fahd International.",
-      "A private car takes you from your Riyadh address to the exact gate, office or front door you need.",
+      "Request a private car from your Riyadh address to an agreed stopping point at your destination.",
     ],
     opposite: "Coming back to the capital?",
     blocks: [
@@ -40,8 +40,8 @@ export const saudiOutbound = {
     ],
     faqs: [
       ["Is there a train as well?", "Yes, Riyadh and Dammam have a passenger rail line. A private car makes more sense when your real start or end point is far from a station, or you are carrying more than you want to move yourself."],
-      ["Can you stop in Khobar or Dhahran first?", "Usually, yes. The three cities sit next to each other, so list each stop in order and it will be included in the quote."],
-      ["Can I book the car to wait and return the same day?", "Ask for it in your inquiry with an estimate of how long you will be. It is quoted as one job rather than two separate transfers."],
+      ["Can you stop in Khobar or Dhahran first?", "List each stop in order. Available on request and subject to driver and partner confirmation."],
+      ["Can I book the car to wait and return the same day?", "Ask for it in your inquiry with an estimate of how long you will be. Waiting and same-day return: available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-khobar/", "Staying on the Khobar side of the metro area instead"],
@@ -62,9 +62,9 @@ export const saudiOutbound = {
     opposite: "Weekend over?",
     blocks: [
       points("Three kinds of Khobar trip", [
-        ["The weekend break", "Thursday afternoon departures are the busiest. An early start or a late-evening drive avoids the worst of the traffic leaving Riyadh."],
+        ["The weekend break", "Weekend departures can be busy. An early start or a late-evening drive avoids the worst of the traffic leaving Riyadh."],
         ["The Dhahran meeting", "Corporate and university campuses control entry at the gate. Ask your host where a private vehicle may drop you."],
-        ["The Bahrain connection", "Khobar is the Saudi landfall of the King Fahd Causeway. If Bahrain is the real destination, book straight through rather than changing cars."],
+        ["The Bahrain connection", "Khobar is the Saudi landfall of the King Fahd Causeway. If Bahrain is the destination, ask about a through journey. Available on request and subject to driver and partner confirmation."],
         ["The family visit", "Residential compounds often need the guest and the vehicle registered. Share the driver's details with security once you have them."],
       ]),
       prose("Getting there",
@@ -91,7 +91,7 @@ export const saudiOutbound = {
     faqs: [
       ["Is Khobar the same as Dammam for booking purposes?", "They are neighbouring cities, but give the right one. A Khobar corniche hotel and a Dammam port gate are different drop-offs."],
       ["Can I break the trip in Khobar and continue to Bahrain later?", "Yes, as two bookings or one with an overnight gap. The onward leg crosses a border, so it needs its own documents and planning."],
-      ["Which day is hardest to book?", "Thursday outbound and Saturday return see the most demand, as do public holidays. Inquire early for those."],
+      ["Which day is hardest to book?", "Weekends and public holidays may be harder to arrange, so inquire early. Inquire early for those."],
     ],
     links: [
       ["/international-transfers/riyadh-to-bahrain/", "Going all the way across the causeway"],
@@ -107,7 +107,7 @@ export const saudiOutbound = {
     h1: "Riyadh to Qassim private transfer",
     intro: [
       "Qassim is a region rather than one address. Buraydah is its capital, Unaizah its neighbour, and around them are Ar Rass, Al Bukayriyah, Al Badai, Al Mithnab and dozens of farming communities.",
-      "This page is for journeys to the wider region, particularly the towns that trains and coaches do not reach directly.",
+      "This page is for journeys to the wider region, particularly towns outside Buraydah and Unaizah.",
     ],
     opposite: "Heading back to the capital?",
     blocks: [
@@ -119,7 +119,7 @@ export const saudiOutbound = {
         "Farms and rest houses: send a map pin, because few have a street address",
       ], "“Qassim” alone is not enough for a quote. Towns in the region can be a long way apart."),
       prose("The drive north-west",
-        "Highway 65 leaves Riyadh through the Sudair area and Al Majma'ah, then turns west towards Qassim after Al Ghat. Service stations are regular along this corridor.",
+        "Highway 65 leaves Riyadh through the Sudair area and Al Majma'ah, then turns west towards Qassim after Al Ghat. Plan fuel and rest stops before departure.",
         "Beyond the main towns, the last section may be on single-carriageway roads between farms. Arriving in daylight makes a first visit much easier."),
       vehicleOptions("Vehicles for the region", "Consider what comes home with you too. Date-season trips rarely return empty.", {
         sedan: "One or two travellers staying in town.",
@@ -141,7 +141,7 @@ export const saudiOutbound = {
     faqs: [
       ["Should I use this page or the Buraydah page?", "If your address is in Buraydah or Unaizah, use those pages. Use this one for any other town, or if you are visiting several."],
       ["Is there a train to Qassim?", "Yes. The passenger line north from Riyadh has a Qassim stop. It suits people whose hosts can collect them; a private car suits those who need to reach a particular town or farm."],
-      ["Can we visit two towns in one day?", "Yes, if you list both and how long you need at each."],
+      ["Can we visit two towns in one day?", "List both towns and the time needed at each. Available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-buraydah/", "Addresses in the regional capital"],
@@ -157,7 +157,7 @@ export const saudiOutbound = {
     h1: "Riyadh to Buraydah, direct to your address",
     intro: [
       "Buraydah is the administrative and trading centre of Qassim, known across the Kingdom for its date market. People travel here for hospital appointments, government business, university and trade.",
-      "Most of those have a set hour. A private transfer is built around it.",
+      "Most of those have a set hour. Share the hour when you inquire.",
     ],
     opposite: "Need the journey in reverse?",
     blocks: [
@@ -173,7 +173,7 @@ export const saudiOutbound = {
         ["Decide about waiting", "Keep the car for a same-day return, or book a later pickup."],
         ["Confirm the fare", "You approve the vehicle and price before the trip is set."]),
       prose("The route",
-        "The journey follows Highway 65 north-west past Al Majma'ah and Al Ghat, where it joins Highway 60 and continues into Buraydah. It is motorway driving for most of the way, with fuel and prayer stops along it."),
+        "The journey follows Highway 65 north-west past Al Majma'ah and Al Ghat, where it joins Highway 60 and continues into Buraydah. Ask about planned fuel and prayer stops."),
       vehicleOptions("Suggested vehicles", "Choose on comfort for passengers going out, and on cargo for the way back.", {
         sedan: "A single appointment with light bags.",
         suv: "Families, or a few boxes of dates on the return.",
@@ -182,7 +182,7 @@ export const saudiOutbound = {
       }),
     ],
     faqs: [
-      ["Can the driver wait during a medical appointment?", "Waiting can be included if you request it. Appointments overrun, so give a realistic upper limit."],
+      ["Can the driver wait during a medical appointment?", "Waiting: available on request and subject to driver and partner confirmation. Appointments overrun, so give a realistic upper limit."],
       ["How much can I carry back from the market?", "It depends on the vehicle and passengers. Estimate the boxes in your inquiry so the category can be matched."],
       ["Can you collect someone from Unaizah on the way home?", "The two cities are close, so it is usually a small detour. Add it to the request as a stop."],
     ],
@@ -233,8 +233,8 @@ export const saudiOutbound = {
     ],
     faqs: [
       ["Can a sedan reach a farm rest house?", "Sometimes. If the last part is unpaved or sandy, choose an SUV and say so in the notes."],
-      ["Is a one-day round trip realistic?", "It is possible with an early departure, but it is a long day. An overnight stay is more comfortable with children."],
-      ["Can we stop in Buraydah on the way?", "Yes, add it to the inquiry with a rough duration."],
+      ["Is a one-day round trip realistic?", "Same-day returns are long. Available on request and subject to driver and partner confirmation. An overnight stay is more comfortable with children."],
+      ["Can we stop in Buraydah on the way?", "Add it to the inquiry. Available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-buraydah/", "Market, hospital or university visits nearby"],
@@ -261,11 +261,11 @@ export const saudiOutbound = {
         ["Stopping in Taif", "A cooler mountain city on the way, for a meal or a night."],
       ]),
       prose("How the route works",
-        "Highway 40 runs west from Riyadh to Taif. From there the road drops out of the mountains towards the coast. Vehicles heading for Jeddah go around the Makkah area, and non-Muslim passengers must remain outside the Makkah sanctuary boundary.",
-        "Please mention in your inquiry if anyone in the car is not Muslim, so the correct road is planned from the start."),
+        "Highway 40 runs west from Riyadh to Taif. From there the road drops out of the mountains towards the coast. Only Muslims may enter the Sacred Area of Makkah. Any route must comply with road signs, checkpoints and current Saudi regulations, and is confirmed before booking.",
+        "Routes must comply with Saudi access rules. Ask about route suitability before booking."),
       list("Pacing a long drive", [
         "Decide whether you prefer one continuous day or an overnight stop, for example in Taif",
-        "A long run may call for rest periods or a second driver, which shapes the fare",
+        "Rest periods, overnight stops or a second driver: available on request and subject to driver and partner confirmation",
         "Mountain sections near Taif can have fog or rain. Daylight is better",
         "Carry medicines, chargers and snacks inside the cabin",
       ]),
@@ -282,7 +282,7 @@ export const saudiOutbound = {
         ["Set the pickup", "Early departures work best."]),
     ],
     faqs: [
-      ["Will we pass through Makkah?", "Routes to Jeddah can avoid the sanctuary area. If your whole party is Muslim and you wish to stop in Makkah, request it as a separate stop."],
+      ["Will we pass through Makkah?", "The route is confirmed before booking and must comply with Saudi access rules. A Makkah stop is only for eligible passengers, subject to current regulations and seasonal restrictions."],
       ["Which Jeddah areas can be reached?", "Give any address: Obhur in the north, Al Balad, the corniche or southern districts. The city is long, so the area affects the final part of the drive."],
       ["Can I send luggage without travelling?", "This is a passenger service. Please use a courier or moving company for unaccompanied goods."],
     ],
@@ -296,24 +296,24 @@ export const saudiOutbound = {
 
   "/saudi-arabia/riyadh-to-makkah/": {
     title: "Riyadh to Makkah Transfer for Umrah | Private Vehicle",
-    description: "Private transfer from Riyadh to Makkah for Umrah and family visits, with a miqat stop and hotel drop-off planned in. Request a quote.",
+    description: "Private transfer from Riyadh to Makkah for Umrah and family visits, for eligible passengers, subject to current Saudi regulations and driver and partner confirmation.",
     h1: "Riyadh to Makkah private transfer",
     intro: [
-      "Most travellers on this road are going for Umrah. The journey itself is part of it: entering ihram at the miqat, arriving rested, and reaching a hotel that may be hard to approach by car.",
-      "A private vehicle lets your family set the pace for all three.",
+      "Many people travel to Makkah for Umrah. Arriving rested matters, and so does knowing in advance how close to a hotel a vehicle may stop.",
+      "Ask about stops and timing when you inquire.",
     ],
     opposite: "After your Umrah, travel home with",
     blocks: [
-      note("Who may travel to Makkah", "Entry to Makkah is for Muslims only, and checkpoints operate on the approach roads. In the weeks before and during Hajj, entry is further restricted to permit holders. Check the current rules and permits for every passenger. A booking does not grant entry."),
-      prose("The miqat on this route",
-        "Pilgrims coming from the direction of Najd traditionally enter ihram at Qarn al-Manazil, known as As-Sayl al-Kabir, near Taif. An alternative point, Wadi Muharram, serves the Al Hada mountain road.",
-        "Tell us that you intend to perform Umrah and how long you would like there for washing, changing and prayer. The choice of road then follows the choice of miqat."),
+      note("Who may travel to Makkah", "Only Muslims may enter the Sacred Area of Makkah, and Saudi eVisa terms separately bar non-Muslims from the Holy Mosque and its premises. We do not arrange transport into Makkah for non-Muslim passengers. Saudi authorities may restrict entry at certain times, including around Hajj. Check current Ministry of Interior announcements. Check the current rules and permits for every passenger. A booking does not grant entry."),
+      prose("Ihram and Miqat",
+        "For Ihram and Miqat guidance, follow the Ministry of Hajj and Umrah at haj.gov.sa.",
+        "If you would like a stop on the way, request it with your inquiry. Stops are subject to driver and partner confirmation."),
       list("Before you leave Riyadh", [
-        "Arrange your Umrah permit through the official Nusuk platform",
+        "Check Umrah permit requirements on official platforms such as Nusuk",
         "Keep IDs, iqamas or visas in the cabin, not in the boot",
         "Pack ihram garments and unscented toiletries where you can reach them",
         "Ask your hotel where vehicles may stop, as roads around the Haram close at busy times",
-        "Request a wheelchair-friendly vehicle if an older relative needs one",
+        "Ask about mobility needs, which are subject to driver and partner confirmation",
       ]),
       vehicleOptions("Vehicles for pilgrims", "Think about getting in and out in ihram, and about tired passengers on the way back.", {
         sedan: "A couple with modest luggage.",
@@ -323,26 +323,26 @@ export const saudiOutbound = {
       }),
       steps("Arranging your transfer",
         ["Share dates and hotel", "Include the number of nights."],
-        ["State the miqat stop", "And any overnight break you would like."],
+        ["Request any stops", "Including an overnight break, subject to confirmation."],
         ["Review the fare", "With stops and vehicle listed."],
         ["Set out", "Timed around prayer and rest where possible."]),
     ],
     faqs: [
-      ["Can the car reach the hotel entrance?", "It depends on the hotel and crowd controls at that hour. The driver will go as near as authorities allow; your hotel can advise on porters."],
+      ["Can the car reach the hotel entrance?", "It depends on the hotel and crowd controls at that hour. Drop-off depends on access rules at the time and is not guaranteed."],
       ["Do you provide Hajj or Umrah permits?", "No. Permits and packages must be arranged through official channels. We only coordinate transport."],
-      ["Can we continue to Madinah afterwards?", "You can ask for it as an additional leg. Give the dates so it can be quoted with the rest."],
+      ["Can we continue to Madinah afterwards?", "You can ask for it as an additional leg. Available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-madinah/", "Beginning your visit in Madinah"],
       ["/saudi-arabia/riyadh-to-jeddah/", "Continuing to the coast"],
       ["/services/family-transportation/", "Travelling with parents and children"],
     ],
-    cta: { title: "Preparing for Umrah?", text: "Send your hotel, dates and miqat preference for a complete quote." },
+    cta: { title: "Preparing for Umrah?", text: "Send your hotel and dates to ask about availability." },
   },
 
   "/saudi-arabia/riyadh-to-madinah/": {
     title: "Riyadh to Madinah Private Transfer | Via Qassim",
-    description: "Private long-distance transfer from Riyadh to Madinah through Qassim, with rest stops and hotel drop-off near the Prophet's Mosque.",
+    description: "Private long-distance transfer from Riyadh to Madinah through Qassim, with stops and drop-off subject to access rules and confirmation.",
     h1: "Riyadh to Madinah private transfer",
     intro: [
       "The road to Madinah goes north-west first, through Qassim, then west across a long and quiet stretch of the Kingdom.",
@@ -351,18 +351,18 @@ export const saudiOutbound = {
     opposite: "Planning the way home?",
     blocks: [
       prose("Two halves of one journey",
-        "The first half follows Highway 65 from Riyadh to the Qassim region, past towns with plenty of services. The second follows Highway 60 from Qassim towards Madinah, where facilities are more widely spaced.",
-        "For that reason, Qassim is the natural place for a meal, fuel and a proper rest before continuing."),
+        "The first half follows Highway 65 from Riyadh to the Qassim region, past towns with plenty of services. The second follows Highway 60 from Qassim towards Madinah, where stops should be planned in advance.",
+        "Qassim is a practical place to plan a meal, fuel and rest."),
       steps("A comfortable plan",
         ["Leave early", "Use the cool hours and reach Qassim by mid-morning."],
         ["Take a real break", "Food, prayer and a walk before the quieter section."],
         ["Continue in daylight", "Easier for driver and passengers alike."],
         ["Arrive by the hotel's approach", "With a pin for the correct side of the mosque."]),
       points("Arriving in Madinah", [
-        ["Central hotels", "Access roads near the Prophet's Mosque can close around prayer times. Ask your hotel which side to approach from."],
+        ["Central hotels", "Ask your hotel about vehicle access near the Prophet's Mosque. Ask your hotel which side to approach from."],
         ["Quba and other districts", "Easier to reach by car. A district name and pin are enough."],
-        ["Visiting Rawdah", "Entry is by booking through official channels. Choose a slot with time to spare after arrival."],
-        ["Non-Muslim passengers", "Visitors are received in the city, while the Prophet's Mosque area is restricted. Confirm the current guidance first."],
+        ["Visiting Rawdah", "Check current visiting arrangements on official platforms. Choose a slot with time to spare after arrival."],
+        ["Non-Muslim passengers", "Madinah city and the Prophet's Mosque are separate. Saudi eVisa terms bar non-Muslims from the Prophet's Mosque and its premises. Check current official guidance on the city and surrounding areas."],
       ]),
       vehicleOptions("Vehicle advice", "Pick for hours on the road, not only for the number of seats.", {
         sedan: "Two travellers who pack lightly.",
@@ -384,8 +384,8 @@ export const saudiOutbound = {
     ],
     faqs: [
       ["Is there a direct train from Riyadh?", "No. The Haramain line connects Madinah with Makkah and Jeddah but not with Riyadh. The options are to fly or go by road."],
-      ["Do we need ihram for Madinah?", "Not for visiting Madinah itself. If you go on to Makkah for Umrah, the miqat for Madinah is Dhul Hulayfah, on the way out of the city."],
-      ["Can we stay the night on the way?", "Yes. Choose the hotel and tell us the dates; accommodation is booked and paid by you."],
+      ["Where can I check Ihram and Miqat rules?", "Follow the Ministry of Hajj and Umrah at haj.gov.sa."],
+      ["Can we stay the night on the way?", "Overnight journeys: available on request and subject to driver and partner confirmation. Accommodation is arranged by you."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-makkah/", "Travelling directly to Makkah"],

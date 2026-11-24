@@ -3,7 +3,7 @@ import { list, note, points, prose, steps, vehicleOptions, type RouteContent } f
 export const internationalReturn = {
   "/international-transfers/bahrain-to-riyadh/": {
     title: "Bahrain to Riyadh Private Car | Manama Hotel Pickup",
-    description: "Private car from Manama, Juffair, Seef or Bahrain Airport to Riyadh over the causeway. Saudi entry preparation and quote request.",
+    description: "Request a private car from Manama, Juffair or Seef to Riyadh over the causeway. Saudi entry preparation and quote request.",
     h1: "Bahrain to Riyadh by private car",
     intro: [
       "Visitors often land in Bahrain and finish in Riyadh, while Saudi residents come home after a weekend. Both cross the same causeway, but with different papers.",
@@ -13,13 +13,12 @@ export const internationalReturn = {
     blocks: [
       points("Which traveller are you?", [
         ["Saudi citizen or resident", "Have your national ID or passport and iqama ready. Residents should check that re-entry is valid."],
-        ["First-time visitor", "Apply for the right Saudi visa before travelling. Do not assume one can be issued at the crossing."],
+        ["First-time visitor", "Apply for the right Saudi visa before travelling. Check the official Saudi visa platform. Visitors arriving by land should also check Absher Travel for Visitors."],
         ["Business visitor", "Carry an invitation and your Riyadh address."],
         ["Arriving by air in Bahrain", "You will enter Bahrain, then leave it. Check that both are permitted."],
       ]),
       list("Pickup in Bahrain", [
         "Hotels in Manama, Juffair, Seef and Amwaj: give the entrance and your checkout time",
-        "Bahrain International Airport: flight number, terminal door and bags",
         "Private addresses: building, road and block numbers, as used locally",
         "Saturday afternoons: leave early, since weekend visitors return together",
       ]),
@@ -33,23 +32,23 @@ export const internationalReturn = {
         van: "Groups travelling together.",
       }),
       steps("Arrange the pickup",
-        ["Share your Bahrain location", "And any flight."],
+        ["Share your Bahrain location", "Hotel or private address."],
         ["State your status", "Nationality, and visa or residency."],
         ["Review the fare", "With tolls and waiting explained."],
         ["Meet the driver", "At the agreed entrance."]),
       note("Entry to Saudi Arabia", "Saudi officials decide on admission. A reserved car does not secure a visa or clearance."),
     ],
     faqs: [
-      ["Can I go from Bahrain airport straight to Riyadh?", "Yes, when your documents allow you to enter Bahrain and then Saudi Arabia, and a suitable vehicle is confirmed."],
+      ["Can I go from Bahrain airport straight to Riyadh?", "Airport pickup in Bahrain is not confirmed. Passengers must verify entry rules for both countries."],
       ["Will the driver carry my bag through customs?", "You remain responsible for your own luggage and any questions about it."],
-      ["When is the causeway quietest?", "Often early in the day and midweek, though it varies. Check its official channels before setting out."],
+      ["When is the causeway quietest?", "It varies. Check KFCA before setting out. Check its official channels before setting out."],
     ],
     links: [
       ["/saudi-arabia/khobar-to-riyadh/", "Starting after the causeway"],
       ["/international-transfers/doha-to-riyadh/", "Travelling from Qatar"],
       ["/services/business-transportation/", "Moving visitors and delegations"],
     ],
-    cta: { title: "Being collected in Bahrain?", text: "Send your hotel or flight and your Saudi entry status." },
+    cta: { title: "Being collected in Bahrain?", text: "Send your hotel or address and your travel date." },
   },
 
   "/international-transfers/doha-to-riyadh/": {
@@ -63,7 +62,7 @@ export const internationalReturn = {
     opposite: "Going from Riyadh to Qatar?",
     blocks: [
       list("Check before the car arrives", [
-        "Saudi visa, or GCC residency eligibility, for every passenger",
+        "Travel documents and entry permission required by the Saudi authorities for each passenger",
         "Qatar exit conditions that apply to your residence or visa",
         "Passport validity and children's documents",
         "No prohibited goods in luggage. Saudi customs rules differ from Qatar's",
@@ -71,9 +70,8 @@ export const internationalReturn = {
       ]),
       prose("Two border posts, then the open road",
         "Abu Samra handles departure from Qatar and Salwa handles arrival in Saudi Arabia. Expect to show documents more than once.",
-        "Afterwards, the road turns inland for Riyadh. Services are fewer than on the Dammam expressway, so a meal near the border or at the next main stop is sensible."),
+        "Afterwards, the road turns inland for Riyadh. Plan fuel, food and rest before this section."),
       points("Doha pickup places", [
-        ["Hamad International Airport", "Passengers in transit must be allowed to enter Qatar first. Give the flight number."],
         ["West Bay, Lusail and The Pearl", "Tower name and lobby, with parking instructions."],
         ["Al Wakrah and the south", "Closer to the border road."],
         ["Industrial Area and company housing", "Gate name and a contact person."],
@@ -92,7 +90,7 @@ export const internationalReturn = {
       note("Clearance", "Neither we nor the driver can influence a border decision or promise how long it will take."),
     ],
     faqs: [
-      ["Can a GCC resident enter Saudi Arabia by road?", "Often with the appropriate e-visa, but eligibility is for the Saudi authorities to decide. Apply through official portals."],
+      ["Can a GCC resident enter Saudi Arabia by road?", "We cannot advise on eligibility. Check official Saudi platforms, including Absher Travel for Visitors. Apply through official portals."],
       ["How early should I leave Doha?", "Early enough to clear the border in daylight and reach Riyadh without driving deep into the night."],
       ["Can I be dropped in Al Ahsa or Dammam?", "Request it as a different destination or an extra stop."],
     ],
@@ -109,7 +107,7 @@ export const internationalReturn = {
     description: "Moving or travelling from Dubai to Riyadh by private car? Plan UAE exit, Saudi entry, rest stops and baggage, then request a quote.",
     h1: "Dubai to Riyadh by private car",
     intro: [
-      "New job in the Kingdom, end of a lease, a family with ten suitcases: many Dubai to Riyadh journeys are about moving life from one city to another.",
+      "New job in the Kingdom, end of a lease, a family with ten suitcases: some travellers are moving between the two cities.",
       "A private vehicle takes you and your bags together, with one plan from tower lobby to new front door.",
     ],
     opposite: "Visiting Dubai from Riyadh?",
@@ -120,7 +118,6 @@ export const internationalReturn = {
         "Leave plants, alcohol and restricted medicines behind",
         "Carry attested certificates and contracts by hand",
         "Check your Saudi visa type and its entry deadline",
-        "Cancel or keep UAE residency according to advice from your employer",
       ]),
       steps("Shape of the journey",
         ["Out through Abu Dhabi", "The coastal highway west, past Ruwais."],
@@ -129,7 +126,7 @@ export const internationalReturn = {
         ["Desert to Riyadh", "The longest part. Rest before beginning it."]),
       prose("Where to rest",
         "There is a good choice of hotels in Abu Dhabi and along Al Dhafra, and fewer after the border. For an overnight break, it is easier to stop before crossing and continue fresh in the morning.",
-        "If you would rather drive straight through, ask about a two-driver plan."),
+        "If you would rather drive straight through, ask about a two-driver plan, which is subject to driver and partner confirmation."),
       vehicleOptions("How much vehicle?", "Count bags honestly, then add one.", {
         sedan: "A short visit with minimal luggage.",
         suv: "Couples moving with several cases.",
@@ -150,7 +147,7 @@ export const internationalReturn = {
     ],
     faqs: [
       ["How many suitcases can I bring?", "It depends on the vehicle and passengers. List sizes and you will be told what fits before booking."],
-      ["Can I start in Sharjah or Ajman?", "Yes. Give the address, as it changes the start of the route."],
+      ["Can I start in Sharjah or Ajman?", "Available on request and subject to driver and partner confirmation."],
       ["Can my car be driven alongside?", "We arrange passenger transfers, not vehicle delivery."],
     ],
     links: [
@@ -172,13 +169,12 @@ export const internationalReturn = {
     opposite: "Going to the Emirates?",
     blocks: [
       prose("Time your crossing",
-        "Freight dominates this border. Passenger lanes are separate, but surrounding traffic and holiday peaks still have an effect.",
+        "Freight and passenger traffic both use this crossing, and conditions vary.",
         "Leaving the city early lets you cross in the morning and use daylight for the Saudi desert section. From Ruwais, a later start may achieve the same."),
       points("Collection areas", [
         ["Abu Dhabi island", "Hotel, ministry or tower with a legal waiting place."],
         ["Yas and Saadiyat", "Resort entrance and checkout time."],
         ["Ruwais and Al Dhafra", "Housing complex or plant gate, with security cleared in advance."],
-        ["Zayed International Airport", "Flight details and permission to enter the UAE."],
       ]),
       list("Document check", [
         "Saudi visa or entitlement matched to the purpose of travel",
@@ -201,7 +197,7 @@ export const internationalReturn = {
       note("Please remember", "Authorities may inspect, delay or refuse a traveller or vehicle. We cannot guarantee the outcome."),
     ],
     faqs: [
-      ["Can you collect two people in different places?", "Yes, such as the island and then Ruwais, if both are on the route and listed."],
+      ["Can you collect two people in different places?", "Multi-stop: available on request and subject to driver and partner confirmation."],
       ["Is Al Ain a possible pickup?", "It adds a substantial detour. Include it in the inquiry and it will be quoted if available."],
       ["Can we arrive in Riyadh the same day?", "With an early departure and a smooth crossing it is possible, but treat it as a hope rather than a promise."],
     ],
@@ -227,12 +223,11 @@ export const internationalReturn = {
         ["Jahra and western areas", "Salmi to Al Ruqi, then Hafr Al Batin and south to Riyadh."],
         ["Ahmadi, Fahaheel and Mangaf", "Nuwaiseeb to Khafji, along the Gulf coast."],
         ["Kuwait City, Hawalli and Salmiya", "Both are practical. Say if you want a stop on the Saudi coast."],
-        ["Kuwait International Airport", "Only if you are entitled to enter Kuwait. Send the flight details."],
       ]),
       list("Entering Saudi Arabia", [
-        "GCC citizens: passport or accepted national ID",
-        "Residents: the appropriate Saudi e-visa, and a Kuwait residence that permits return",
-        "Umrah travellers: a permit through Nusuk",
+        "GCC citizens: documents accepted by the Saudi authorities",
+        "Residents: entry permission required by the Saudi authorities",
+        "Umrah travellers: check official permit requirements",
         "Families: documents for domestic staff travelling with you",
         "Everyone: check customs allowances before packing",
       ], "Rules differ by nationality and change over time."),
@@ -254,8 +249,8 @@ export const internationalReturn = {
     ],
     faqs: [
       ["Which border is faster?", "It changes with the day and season. Check official announcements and leave room in your schedule."],
-      ["Can a domestic worker travel with us?", "Only with the correct documents from both countries. Verify these before booking."],
-      ["Can we stop at Khafji or Jubail?", "Yes, on the coastal route, if included in the quote."],
+      ["Can a domestic worker travel with us?", "We cannot advise on eligibility. Check with both authorities."],
+      ["Can we stop at Khafji or Jubail?", "Multi-stop: available on request and subject to driver and partner confirmation."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-qassim/", "Continuing to Qassim"],
@@ -266,7 +261,7 @@ export const internationalReturn = {
   },
 
   "/international-transfers/muscat-to-riyadh/": {
-    title: "Muscat to Riyadh Overland | Private Transfer Planning",
+    title: "Muscat to Riyadh Overland | Feasibility Check",
     description: "Plan a private overland journey from Muscat to Riyadh by Ibri and the Empty Quarter, or through the UAE. Ask for a feasibility check.",
     h1: "Muscat to Riyadh overland",
     intro: [
@@ -288,7 +283,7 @@ export const internationalReturn = {
         ["Weather in the sands", "A forecast of strong wind is reason enough to reconsider."],
       ]),
       prose("A good first night",
-        "Ibri is a practical stop before the desert. Reaching it in the afternoon allows an early start and a daylight crossing.",
+        "Ibri may be considered as a stop. Reaching it in the afternoon allows an early start and a daylight crossing.",
         "By the UAE, choose a hotel that leaves the Saudi border for the next morning."),
       list("Essentials", [
         "Saudi visa or entry right, plus UAE permission when transiting",
@@ -299,7 +294,7 @@ export const internationalReturn = {
       ]),
       vehicleOptions("Vehicle categories", "We do not suggest a sedan for this trip.", {
         suv: "Small groups with modest luggage.",
-        gmc: "Space and comfort over more than one day.",
+        gmc: "May suit a multi-day journey, if one is confirmed.",
         van: "Larger parties, when the route allows.",
       }),
       note("Limits of what we arrange", "Roads, crossings and admissions are controlled by governments and can change without notice. Confirmation of a car is not confirmation of entry."),

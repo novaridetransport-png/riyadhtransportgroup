@@ -1,11 +1,12 @@
 import { ArrowLeftRight, ArrowRight, Check, Plus } from "lucide-react";
+import { notFound } from "next/navigation";
 import { BookingForm } from "@/components/booking/booking-form";
 import { Breadcrumbs } from "@/components/navigation/breadcrumbs";
 import { ButtonLink } from "@/components/ui/button";
 import { PageLink } from "@/components/ui/page-link";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { placeSuggestions } from "@/config/routes";
-import { getPage, linkFor, returnPath, type PagePath } from "@/config/urls";
+import { getPage, isPublished, linkFor, returnPath, type PagePath } from "@/config/urls";
 import { vehicles } from "@/config/vehicles";
 import type { Block, PageContent } from "@/content/types";
 import { JsonLd, serviceLd } from "@/lib/seo/jsonld";
@@ -61,7 +62,8 @@ function BlockBody({ block }: { block: Block }) {
               );
             })}
           </dl>
-          <p className="mt-5"><PageLink href="/vehicles/" className="font-semibold text-royal underline-offset-4 hover:underline">Compare vehicle categories</PageLink></p>
+          <p className="mt-5 text-[.95rem]">Categories are examples and depend on availability.</p>
+          <p className="mt-2"><PageLink href="/vehicles/" className="font-semibold text-royal underline-offset-4 hover:underline">Compare vehicle categories</PageLink></p>
         </>
       );
   }
@@ -69,6 +71,7 @@ function BlockBody({ block }: { block: Block }) {
 
 /** Landing page for routes, airports and services. Section order and mix come from the content file. */
 export function ContentPage({ path, content, opposite, children }: { path: PagePath; content: PageContent; opposite?: string; children?: React.ReactNode }) {
+  if (!isPublished(path)) notFound();
   const route = getPage(path).route;
   const reverse = route ? returnPath(path) : null;
   const links = content.links.filter(([p]) => linkFor(p));
@@ -81,6 +84,7 @@ export function ContentPage({ path, content, opposite, children }: { path: PageP
             <div>
               <h1 className="text-[clamp(2.1rem,1.6rem+2vw,3.1rem)] leading-[1.1]">{content.h1}</h1>
               <div className="mt-5 max-w-xl space-y-4 text-lg leading-relaxed text-white/80">{content.intro.map((t) => <p key={t}>{t}</p>)}</div>
+              <p className="mt-5 max-w-xl border-l-2 border-gold pl-4 text-[.95rem] text-white/80">Available on request and subject to driver and partner confirmation.</p>
               <div className="mt-8 flex flex-wrap gap-3"><ButtonLink href="/book-transport/">Request a quote</ButtonLink><WhatsAppButton /></div>
               {reverse && opposite && linkFor(reverse) && (
                 <p className="mt-8 flex max-w-xl gap-3 border-t border-white/15 pt-6 text-white/80">

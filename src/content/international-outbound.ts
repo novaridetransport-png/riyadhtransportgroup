@@ -12,16 +12,16 @@ export const internationalOutbound = {
     opposite: "Returning to Saudi Arabia?",
     blocks: [
       points("Pick your crossing time", [
-        ["Sunday to Wednesday", "Generally calmer, outside commuter peaks."],
+        ["Sunday to Wednesday", "Traffic varies; check KFCA before departure."],
         ["Thursday afternoon and evening", "The weekend rush out of the Eastern Province. Leave early or go late."],
         ["Holidays and race weekends", "Demand rises sharply for cars, hotels and lanes alike."],
         ["Bad weather", "Wind or fog can slow or close the causeway. Check its status on the day."],
       ]),
       prose("What happens on the island",
-        "Both countries operate their border facilities on the causeway's middle island, and arrangements have been streamlined so that travellers spend less time moving between counters. You show your own documents and answer officials' questions yourself.",
+        "Border formalities take place on the causeway. Follow the instructions of the causeway authority and border officers. You show your own documents and answer officials' questions yourself.",
         "The causeway has a toll. Whether it is included will be stated in your quote."),
       list("Documents to prepare", [
-        "A valid passport, or a national ID for GCC citizens where accepted",
+        "Travel documents accepted by the Saudi and Bahraini authorities for your nationality",
         "A Bahrain visa or eVisa, if your nationality requires one",
         "For Saudi residents: a valid iqama and exit/re-entry permission where it applies",
         "For children: their own documents, and consent papers if one parent is absent",
@@ -41,9 +41,9 @@ export const internationalOutbound = {
         ["Agree the departure", "Planned around the crossing."]),
     ],
     faqs: [
-      ["Can the same car take me all the way?", "That is the aim. The vehicle and driver must be eligible to cross, and this is confirmed before you book."],
-      ["What if one passenger is refused entry?", "Decide beforehand whether the others continue. Any return or waiting is charged on the terms in your quote."],
-      ["Can you drop me at Bahrain International Airport?", "Give the flight and airport as your destination. Allow a generous margin for the crossing."],
+      ["Can the same car take me all the way?", "A through vehicle: available on request and subject to driver and partner confirmation. Driver and vehicle eligibility must also be confirmed."],
+      ["What if one passenger is refused entry?", "Decide beforehand whether the others continue. Return and waiting terms are to be confirmed before booking."],
+      ["Can you drop me at Bahrain International Airport?", "Airport drop-off in Bahrain is not confirmed. Allow a generous margin for the crossing."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-khobar/", "Stopping on the Saudi side"],
@@ -66,7 +66,7 @@ export const internationalOutbound = {
       steps("The journey in four parts",
         ["Riyadh to the Gulf side", "A long desert section eastwards. Plan one good break."],
         ["Salwa", "Saudi exit formalities for passengers and vehicle."],
-        ["Abu Samra", "Qatari entry, where pre-completed steps save the most time."],
+        ["Abu Samra", "Qatari entry, where any required steps should already be complete."],
         ["Into Doha", "The highway from the border leads north-east into the city."]),
       list("Prepare before departure", [
         "Passport and the correct Qatar visa or entry permission for your nationality",
@@ -76,13 +76,12 @@ export const internationalOutbound = {
         "Iqama and exit/re-entry permission for Saudi residents, where it applies",
       ], "Procedures change. Use the Qatar Ministry of Interior and Hayya channels for current rules."),
       prose("About the vehicle",
-        "Qatar requires local insurance cover for foreign vehicles, and other permissions may apply to a vehicle carrying passengers. These concern the car and driver, and are settled when a vehicle is assigned.",
+        "Qatar requires insurance for vehicles with non-Qatari plates, arranged since 1 February 2026 through the electronic MSAR system. Other permissions may apply to a vehicle carrying passengers. Driver, vehicle, insurance and permission must be confirmed before any booking is accepted.",
         "Please do not reserve non-refundable plans until the vehicle and its ability to cross have been confirmed to you."),
       points("Doha drop-off areas", [
         ["West Bay and The Pearl", "Give the tower and entrance. Many share a podium."],
         ["Lusail", "Event days bring road closures. Ask your venue."],
         ["Msheireb and Souq Waqif", "Pedestrian zones, so choose a nearby drop point."],
-        ["Hamad International Airport", "Leave a wide margin. A border is not a place to gamble a flight."],
       ]),
       vehicleOptions("Vehicle choice", "You may sit in the car at the border, so comfort counts.", {
         sedan: "One or two travellers.",
@@ -100,7 +99,7 @@ export const internationalOutbound = {
     faqs: [
       ["Is there another road if Abu Samra is busy?", "No. It is Qatar's only land crossing, so the variable is when you arrive."],
       ["Do I register my own entry, or do you?", "Each passenger completes their own. We can remind you about it, but cannot apply in your name."],
-      ["Can we travel for a match or concert?", "Yes. Inquire early and aim to arrive the day before."],
+      ["Can we travel for a match or concert?", "Available on request and subject to driver and partner confirmation. Entry is decided by the authorities."],
     ],
     links: [
       ["/international-transfers/riyadh-to-bahrain/", "Over the causeway to Bahrain"],
@@ -122,16 +121,16 @@ export const internationalOutbound = {
     blocks: [
       prose("Understanding the distance",
         "The Saudi stretch runs across sparsely populated desert to Al Batha. Al Ghuwaifat is the UAE side. After it comes a long coastal highway past Abu Dhabi before Dubai appears.",
-        "Crossing the border is therefore not the end of the drive. Many people choose a night in Abu Dhabi emirate, or ask for a plan with two drivers."),
+        "Crossing the border is therefore not the end of the drive. Overnight or two-driver plans: available on request and subject to driver and partner confirmation."),
       points("Decide between two styles", [
         ["One long day", "A pre-dawn departure, brief stops and a late arrival. Best with few passengers and a flexible evening."],
         ["Two easier days", "A hotel break, children rested, and arrival in Dubai outside rush hour."],
       ]),
       list("Papers and permissions", [
         "Passport with enough validity for UAE entry",
-        "UAE visa or visa-on-arrival eligibility for each nationality",
+        "Entry permission required by the UAE authorities for each passenger",
         "Residence documents and Saudi exit/re-entry permission where needed",
-        "Prescriptions for medicines. UAE rules on some drugs are strict",
+        "Prescriptions for medicines. Check UAE rules before carrying them",
         "Receipts or lists for valuable goods and commercial samples",
       ], "Check UAE and Saudi government sources close to your travel date."),
       vehicleOptions("Vehicles for a very long drive", "Choose for sleep, legs and luggage, in that order.", {
@@ -144,7 +143,7 @@ export const internationalOutbound = {
         ["Marina, JBR and Palm", "Reached first when coming from Abu Dhabi."],
         ["Downtown and Business Bay", "Give the tower and its visitor entrance."],
         ["Deira and Bur Dubai", "Older streets with limited stopping space."],
-        ["Dubai airports", "State DXB or DWC, and do not plan a tight connection."],
+        ["Dubai airports", "Airport drop-off in Dubai is not confirmed."],
       ]),
       steps("From inquiry to departure",
         ["Choose a style", "One day or two."],
@@ -154,7 +153,7 @@ export const internationalOutbound = {
     ],
     faqs: [
       ["Can you guarantee an arrival time?", "No. Border processing and traffic are outside anyone's control. Keep the evening free."],
-      ["Can I continue to Sharjah or Ajman?", "Name it as your destination and it will be quoted."],
+      ["Can I continue to Sharjah or Ajman?", "Available on request and subject to driver and partner confirmation."],
       ["Is a pet allowed?", "Ask first. Besides the vehicle, animals need import and export paperwork at the border."],
     ],
     links: [
@@ -179,15 +178,15 @@ export const internationalOutbound = {
         ["Al Sila and Al Dhafra", "Close to the border. Useful for a change of plan or an overnight rest."],
         ["Ruwais", "Industrial and residential. Gate passes must be ready before you arrive."],
         ["Abu Dhabi island and Al Reem", "Offices, embassies and the corniche."],
-        ["Yas, Saadiyat and the airport", "On the Dubai side, so allow extra time to pass the city."],
+        ["Yas and Saadiyat", "On the Dubai side, so allow extra time to pass the city."],
       ]),
       steps("Border sequence",
         ["Al Batha", "Saudi exit checks for people and vehicle."],
-        ["Al Ghuwaifat", "UAE entry, customs and vehicle insurance checks."],
+        ["Al Ghuwaifat", "UAE entry formalities, as directed by the authorities."],
         ["Onward", "The E11 coastal highway to your stop."]),
       prose("For business travellers",
-        "If you visit sites, carry an invitation letter, host phone number and equipment list. Instruments, samples and laptops for demonstration may draw customs questions, and temporary import papers should be prepared by your company.",
-        "Build the meeting around the journey: arriving the evening before is the only dependable way to make a morning start."),
+        "If you visit sites, carry an invitation letter, host phone number and equipment list. Instruments, samples and laptops for demonstration may draw customs questions, so take customs advice before carrying equipment.",
+        "Build the meeting around the journey: consider arriving the evening before a morning start."),
       vehicleOptions("Matching a vehicle", "Work trips and family visits load very differently.", {
         sedan: "An individual consultant.",
         suv: "Two or three people with equipment.",
@@ -226,7 +225,7 @@ export const internationalOutbound = {
     description: "Private transfers from Riyadh to Kuwait City, Salmiya or Ahmadi, with the choice of crossing matched to your destination. Ask for a fare.",
     h1: "Riyadh to Kuwait private transfer",
     intro: [
-      "Unlike Qatar, Kuwait gives you a choice. Its two main land crossings with Saudi Arabia face different directions: one on the coast, one inland to the west.",
+      "Unlike Qatar, Kuwait gives you a choice. Khafji–Nuwaiseeb is on the coast and Al Ruqi–Salmi is inland. Check that your crossing is open.",
       "Which is better depends on your final address, the traffic on the day and the vehicle's permissions.",
     ],
     opposite: "Coming south from Kuwait?",
@@ -240,10 +239,10 @@ export const internationalOutbound = {
         "Crossing early in the morning, or on a working day, is usually more comfortable than a holiday evening."),
       list("What each traveller needs", [
         "Passport or an accepted GCC national ID",
-        "Kuwait visa or e-visa where required. Residents' eligibility can depend on profession and permit validity",
+        "Kuwait visa or e-visa where required. Check your eligibility with the Kuwait Ministry of Interior",
         "Saudi iqama and exit/re-entry permission, if applicable",
         "Birth certificates or consent letters for minors where requested",
-        "Awareness of customs limits. Alcohol is prohibited in both countries",
+        "Check prohibited goods and limits with both customs authorities",
       ], "Confirm the rules with the Kuwaiti Ministry of Interior and Saudi authorities."),
       vehicleOptions("Vehicles", "Shopping and family visits tend to fill the boot on the way back.", {
         sedan: "Quick visits for one or two.",
@@ -260,7 +259,7 @@ export const internationalOutbound = {
     ],
     faqs: [
       ["Can I choose the crossing myself?", "You can state a preference. It is confirmed according to the vehicle and the situation on the day."],
-      ["Can we stop in Dammam or Khobar?", "Yes, with the coastal route. Include the stop and its length."],
+      ["Can we stop in Dammam or Khobar?", "Multi-stop: available on request and subject to driver and partner confirmation."],
       ["Does the quote include a return?", "Only if requested. Select Return in the form and add the date."],
     ],
     links: [
@@ -272,17 +271,17 @@ export const internationalOutbound = {
   },
 
   "/international-transfers/riyadh-to-muscat/": {
-    title: "Riyadh to Muscat by Road | Private Transfer to Oman",
+    title: "Riyadh to Muscat by Road | Feasibility Check",
     description: "Considering Riyadh to Muscat by private car? Compare the Empty Quarter road with the UAE route, then ask for a feasibility check and quote.",
     h1: "Riyadh to Muscat by road",
     intro: [
-      "This is the most demanding journey we are asked about. Muscat can be reached either by the direct Saudi–Oman road through the Empty Quarter or by way of the United Arab Emirates.",
+      "This is a demanding overland journey. Muscat can be reached either by the direct Saudi–Oman road through the Empty Quarter or by way of the United Arab Emirates.",
       "Neither is a spontaneous trip. Ask for a feasibility check before you plan anything else around it.",
     ],
     opposite: "Starting in Oman?",
     blocks: [
       points("Compare the two ways", [
-        ["Through the Empty Quarter", "Opened at the end of 2021, the direct road has one border, the Rub al Khali crossing, and reaches Oman near Ibri. Very remote, with few services."],
+        ["Through the Empty Quarter", "A direct Saudi–Oman road and crossing opened in December 2021. Check its current status. Very remote, with few services."],
         ["Through the UAE", "More towns, hotels and fuel, but two borders: into the UAE, then into Oman by a crossing such as Al Wajajah near Hatta. Passengers need permission for both countries."],
       ]),
       list("Questions to settle first", [
@@ -297,7 +296,7 @@ export const internationalOutbound = {
         "Travel with a margin of at least a day on either side of any fixed commitment in Muscat."),
       vehicleOptions("Suitable vehicles", "Smaller vehicles are a poor fit for this distance.", {
         suv: "A small party prepared for a multi-day drive.",
-        gmc: "The preferred category for comfort and luggage.",
+        gmc: "May suit comfort and luggage, if a vehicle is confirmed.",
         van: "Groups, subject to the route and driver plan.",
       }),
       steps("How a feasibility check works",
@@ -309,7 +308,7 @@ export const internationalOutbound = {
     ],
     faqs: [
       ["Which route is better?", "The direct road suits prepared travellers with one set of border formalities. The UAE way suits those who want towns and hotels. Eligibility often decides it."],
-      ["Can it be done in one day?", "We do not recommend it. Plan for overnight rest."],
+      ["Can it be done in one day?", "Overnight journeys: available on request and subject to driver and partner confirmation."],
       ["Do you go to Salalah?", "Not as part of this page. Mention it in an inquiry and you will be told whether it can be arranged."],
     ],
     links: [

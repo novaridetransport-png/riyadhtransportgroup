@@ -9,7 +9,7 @@ export function VehicleShowcase() {
       <div className="shell">
         <div className="grid gap-4 lg:grid-cols-2 lg:gap-20">
           <h2 id="vehicles-heading" className="text-section">Choose the space your journey needs</h2>
-          <p className="text-lg">Vehicles come from independent transport partners. Pick a category, and the vehicle available for your date is confirmed with your quote.</p>
+          <p className="text-lg">Vehicles come from independent transport partners. Pick a category, and availability for your date is confirmed before booking. Categories are examples.</p>
         </div>
         <ul className="mt-12 grid border-t border-line md:grid-cols-2">
           {vehicles.map((v) => (

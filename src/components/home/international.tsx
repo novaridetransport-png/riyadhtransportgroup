@@ -18,7 +18,7 @@ export function International() {
       <div className="shell py-20 lg:py-28">
         <div className="max-w-2xl">
           <h2 id="international-heading" className="text-section">Riyadh to the GCC by road</h2>
-          <p className="mt-5 text-lg leading-relaxed">Private cross-border transfers to Bahrain, Qatar, the UAE, Kuwait and Oman, with the route and border crossing discussed as part of your booking.</p>
+          <p className="mt-5 text-lg leading-relaxed">Private cross-border inquiries for Bahrain, Qatar, the UAE and Kuwait, and feasibility checks for Oman, with the route and border crossing discussed as part of your booking.</p>
         </div>
         <ol className="mt-14 grid gap-10 md:grid-cols-3">
           {notes.map(([t, d]) => <li key={t} className="border-t border-gold pt-5"><h3 className="text-lg">{t}</h3><p className="mt-2 leading-relaxed">{d}</p></li>)}

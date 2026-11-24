@@ -7,6 +7,7 @@ import { registry, indexablePaths, breadcrumbTrail, returnPath, linkFor, isPubli
 const base = process.env.BASE_URL ?? "http://localhost:3000";
 const origin = "https://riyadhtransportgroup.com";
 const errors = [];
+const indexing = process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true";
 const seen = { title: new Map(), description: new Map(), h1: new Map() };
 const texts = new Map();
 const get = (p) => fetch(base + p, { redirect: "manual" });
@@ -29,7 +30,7 @@ for (const [path, entry] of Object.entries(registry)) {
   const canonical = html.match(/rel="canonical" href="([^"]+)"/)?.[1];
   if (new URL(canonical ?? "about:blank").href !== origin + path) errors.push(`${path} canonical is ${canonical}`);
   if (!html.includes('property="og:title"')) errors.push(`${path} has no Open Graph title`);
-  if (/name="robots" content="[^"]*noindex/.test(html) === entry.index) errors.push(`${path} robots does not match the registry`);
+  if (/name="robots" content="[^"]*noindex/.test(html) === (indexing && entry.index)) errors.push(`${path} robots does not match the registry`);
   const h1s = [...html.matchAll(/<h1[^>]*>([\s\S]*?)<\/h1>/g)].map((m) => m[1]);
   if (h1s.length !== 1) errors.push(`${path} must have exactly one h1`);
   unique("title", html.match(/<title>([^<]+)/)?.[1], path);
@@ -77,7 +78,7 @@ const counts = [...texts.values()].map((w) => w.length);
 console.log(`Words per content page: ${Math.min(...counts)} to ${Math.max(...counts)}`);
 
 const sitemap = [...(await (await get("/sitemap.xml")).text()).matchAll(/<loc>([^<]+)/g)].map((m) => m[1]);
-const expected = indexablePaths().map((p) => origin + p);
+const expected = (indexing ? indexablePaths() : []).map((p) => origin + p);
 if (sitemap.join() !== expected.join()) errors.push(`Sitemap mismatch: ${sitemap}`);
 console.log(`Published: ${Object.keys(registry).filter(isPublished).length}, in sitemap: ${sitemap.length}, registered: ${Object.keys(registry).length}`);
 

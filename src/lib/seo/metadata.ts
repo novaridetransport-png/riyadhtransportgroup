@@ -4,7 +4,7 @@ import { getPage, isPublished, type PagePath } from "@/config/urls";
 
 /** Every page builds its metadata here so canonical and robots always follow the registry. */
 export function pageMetadata(path: PagePath, title: string, description: string): Metadata {
-  const indexable = getPage(path).index && isPublished(path);
+  const indexable = site.indexingEnabled && getPage(path).index && isPublished(path);
   const image = { url: "/og.png", width: 1200, height: 630, alt: `${site.name}. ${site.positioning}` };
   return {
     title: { absolute: title },

@@ -20,8 +20,8 @@ export const landingPages = {
         ["I am travelling with family", "Family transportation with child seats, elders and luggage in mind."],
         ["I am leaving the Kingdom", "See the international transfers directory for each country."],
       ]),
-      prose("How we operate",
-        "Transportation is arranged through independent licensed drivers and transport partners. We coordinate the request, the vehicle category and the pickup details with you.",
+      prose("How bookings are arranged",
+        "Transportation is arranged through independent drivers and transport partners. We coordinate the request, the vehicle category and the pickup details with you.",
         "We do not sell individual seats, and we do not put strangers in the same vehicle."),
       steps("The same four steps every time",
         ["Inquire", "Route, date, passengers, bags."],
@@ -30,7 +30,7 @@ export const landingPages = {
         ["Travel", "Directly to where you are going."]),
     ],
     faqs: [
-      ["Can one booking combine services?", "Yes. A family airport arrival followed by an intercity drive is one inquiry. Describe the whole trip."],
+      ["Can one booking combine services?", "Describe the whole trip. Available on request and subject to driver and partner confirmation. Describe the whole trip."],
       ["Do you offer city taxis by the minute?", "No. These are pre-arranged private journeys."],
     ],
     links: [
@@ -46,16 +46,16 @@ export const landingPages = {
 
   "/services/private-transportation/": {
     title: "Private Car with Driver in Riyadh | Custom Journeys",
-    description: "Reserve a private car with driver from Riyadh for multi-stop days, waiting time and custom routes. Tell us the plan and get a quote.",
+    description: "Ask about a private car with driver from Riyadh, including multi-stop days, waiting time and custom routes, subject to confirmation.",
     h1: "A private car with driver, on your plan",
     intro: [
       "Some trips are not simply A to B. They have three stops, a long lunch, a relative to collect and an uncertain finish.",
-      "This service is for those: a vehicle and driver reserved around your own itinerary.",
+      "Use this page to ask for a vehicle and independent driver around your own itinerary. Available on request and subject to driver and partner confirmation.",
     ],
     blocks: [
-      points("Typical requests", [
+      points("What you can ask about", [
         ["Multi-stop days", "Several addresses in a set order, in Riyadh or on the way to another city."],
-        ["Wait and return", "The vehicle stays while you attend an appointment or event."],
+        ["Wait and return", "Wait and return: available on request and subject to driver and partner confirmation."],
         ["Round trips over days", "Out on one date, back on another."],
         ["Unusual routes", "Farms, heritage sites and towns without a page of their own."],
       ]),
@@ -83,7 +83,6 @@ export const landingPages = {
     faqs: [
       ["Is there a minimum booking?", "It depends on the plan and availability, and will be made clear in the quote."],
       ["Can I change the route on the day?", "Often, by agreement. Extra distance or time may alter the fare."],
-      ["Can I request a female driver?", "You may ask. It depends on partner availability and cannot be assumed until confirmed."],
     ],
     links: [
       ["/services/intercity-transfers/", "A simple trip to one city"],
@@ -117,7 +116,7 @@ export const landingPages = {
       ], "There is no single price per city, because two addresses in the same city can be far apart."),
       prose("Three corridors from Riyadh",
         "East: Dammam and Khobar, by expressway to the Gulf. North-west: Qassim with Buraydah and Unaizah, then Madinah beyond. West: Taif, Makkah and Jeddah, the longest of the three.",
-        "The shorter corridors work as day trips. The western and Madinah drives deserve a plan for rest."),
+        "Same-day returns: available on request and subject to driver and partner confirmation. The western and Madinah drives deserve a plan for rest."),
       steps("Booking a transfer",
         ["Check your route's page", "It lists the details that matter there."],
         ["Send both addresses", "With pins."],
@@ -132,8 +131,8 @@ export const landingPages = {
     ],
     faqs: [
       ["Do you run on a timetable?", "No. You propose the time and it is confirmed with availability."],
-      ["Can I book only one seat?", "No. The whole vehicle is reserved for your party."],
-      ["Can the route start outside Riyadh?", "Return journeys to Riyadh can. Riyadh is currently the hub for all listed routes."],
+      ["Can I book only one seat?", "No. Private-party journeys only, subject to confirmation."],
+      ["Can the route start outside Riyadh?", "Return journeys: available on request and subject to driver and partner confirmation. Riyadh is currently the hub for all listed routes."],
     ],
     links: [
       ["/saudi-arabia/", "All Saudi routes, both directions"],
@@ -145,30 +144,30 @@ export const landingPages = {
   },
 
   "/services/airport-transfers/": {
-    title: "Airport Transfers with Intercity Travel | Dammam & Jeddah",
-    description: "Private airport pickup and drop-off connected to Riyadh journeys, for Dammam (DMM) and Jeddah (JED). What to send and how pickups work.",
+    title: "Airport Transfers with Intercity Travel | Ask First",
+    description: "Planning an intercity journey around a flight? Airport pickup and drop-off are not confirmed yet. See what to ask before you book.",
     h1: "Airport transfers linked to your Riyadh journey",
     intro: [
-      "Sometimes the best flight does not land where you live. A fare to Dammam or Jeddah, plus a private drive, can be the simplest way to or from Riyadh.",
-      "Airport pages are added one at a time as coverage is confirmed.",
+      "Sometimes the best flight does not land where you live, and an intercity drive completes the trip.",
+      "No airport service is confirmed yet. Please ask before planning a journey around a flight.",
     ],
     blocks: [
       points("Before you book, send", [
-        ["Flight number and date", "So the arrival can be followed."],
+        ["Flight number and date", "As shown on your booking."],
         ["Terminal", "As printed on your booking. Check it again the day before."],
         ["Checked bags", "Number and size, with any sports or medical equipment."],
         ["A working mobile number", "Roaming or local, reachable on landing."],
       ]),
-      steps("How an arrival pickup works",
-        ["Agree a meeting point", "Inside or outside, according to airport rules."],
+      steps("If an arrival pickup is confirmed",
+        ["Agree a meeting point", "Only a lawful point confirmed to you in advance."],
         ["Land and clear", "Immigration and baggage take as long as they take."],
         ["Make contact", "Message when you have your bags."],
         ["Drive on", "Directly to your address."]),
-      prose("How a departure works",
+      prose("Planning a departure",
         "Give us your check-in deadline rather than the take-off time. On a long drive to an airport, the margin must cover traffic, a stop and the unexpected.",
         "For early flights, travelling the evening before is safer than driving through the night."),
       note("Confirmation matters", "Airport access and pickup rules vary. A pickup is arranged only when it has been confirmed to you for that airport, date and terminal."),
-      vehicleOptions("Luggage first", "Airport trips are the ones most often under-booked.", {
+      vehicleOptions("Luggage first", "Check luggage space carefully.", {
         sedan: "Two travellers with one case each.",
         suv: "Several cases.",
         gmc: "Arriving guests and families.",
@@ -176,7 +175,7 @@ export const landingPages = {
       }),
     ],
     faqs: [
-      ["What about King Khalid International in Riyadh?", "There is no dedicated Riyadh airport page yet. You can still enter it as a pickup or destination on an intercity inquiry."],
+      ["What about King Khalid International in Riyadh?", "There is no dedicated Riyadh airport page yet. Airport access at Riyadh is not confirmed."],
       ["Is waiting time free?", "Waiting terms are set out in each quote. Please read them before confirming."],
     ],
     links: [
@@ -189,11 +188,11 @@ export const landingPages = {
 
   "/services/airport-transfers/dammam-airport/": {
     title: "Dammam Airport (DMM) to Riyadh | Private Pickup & Drop-off",
-    description: "Private pickup and drop-off at King Fahd International Airport, Dammam, for journeys to and from Riyadh. Send your flight for a quote.",
+    description: "Journeys between Riyadh and King Fahd International Airport, Dammam. Airport service is not yet confirmed.",
     h1: "Dammam Airport transfers to and from Riyadh",
     intro: [
-      "King Fahd International (DMM) serves the whole Eastern Province, and its international flights sometimes suit Riyadh travellers better than a connection.",
-      "We coordinate private journeys between the airport and Riyadh, subject to confirmation for your flight.",
+      "King Fahd International (DMM) serves the whole Eastern Province, and some Riyadh travellers may use its flights.",
+      "Airport service is not yet confirmed.",
     ],
     blocks: [
       prose("Where the airport is",
@@ -201,13 +200,13 @@ export const landingPages = {
         "If you have a stop to make in either city, list it, as it takes you in the opposite direction."),
       steps("Arriving at DMM",
         ["Share the flight", "Number, origin and bags."],
-        ["Set a meeting point", "Confirmed beforehand, following airport rules."],
+        ["Ask about a meeting point", "Airport access is not confirmed yet."],
         ["Message on landing", "And again when you leave customs."],
         ["Travel to Riyadh", "With a break if you wish."]),
       steps("Departing from DMM",
         ["Give the check-in deadline", "It decides when you leave Riyadh."],
         ["Add a margin", "Enough for a stop and slow traffic at the city's edge."],
-        ["Name the airline", "So you are dropped at the correct entrance."]),
+        ["Name the airline", "With your departure details."]),
       vehicleOptions("Vehicles for airport luggage", "Tell us bag sizes, not only the count.", {
         sedan: "One or two passengers.",
         suv: "Families with large suitcases.",
@@ -236,18 +235,17 @@ export const landingPages = {
 
   "/services/airport-transfers/jeddah-airport/": {
     title: "Jeddah Airport (JED) to Riyadh by Car | Private Transfer",
-    description: "Private transfers between King Abdulaziz International Airport, Jeddah, and Riyadh. Check terminals, rest stops and luggage, then get a quote.",
+    description: "Journeys between Riyadh and King Abdulaziz International Airport, Jeddah. Airport service is not yet confirmed.",
     h1: "Jeddah Airport transfers to and from Riyadh",
     intro: [
-      "Riyadh to King Abdulaziz International (JED) is a cross-country drive, so this transfer is for particular cases: heavy luggage, a group, a missed connection, or a trip joined with Umrah.",
-      "We coordinate it subject to confirmation, with rest built in.",
+      "Riyadh to King Abdulaziz International (JED) is a cross-country drive, so this transfer is for particular cases: heavy luggage, a group, or a missed connection.",
+      "Airport service is not yet confirmed.",
     ],
     blocks: [
       note("Check your terminal twice", "Terminal assignments at JED have been changing, and seasonal pilgrim terminals operate at certain times. Use the terminal on your latest airline confirmation, and send any update before travelling."),
       points("When it makes sense", [
         ["More baggage than an airline allows", "Moving home or returning from a long stay."],
         ["Groups", "One van rather than several domestic tickets."],
-        ["Umrah on the way", "For Muslim travellers with permits, Makkah can be planned as a stop."],
         ["Domestic flights are full", "Typical at holidays, when roads are busy too."],
       ]),
       prose("Planning a long airport drive",
@@ -262,13 +260,12 @@ export const landingPages = {
       steps("Arrange it",
         ["Flight, terminal and bags", "Plus the number of passengers."],
         ["Rest preference", "Straight through or overnight."],
-        ["Religious status where relevant", "So the road around Makkah is chosen properly."],
         ["Review the quote", "And its waiting terms."]),
     ],
     faqs: [
       ["Would a domestic flight be better?", "For one traveller with normal luggage, probably yes. The car is for situations a flight handles badly."],
       ["Can you collect from the Hajj terminal?", "Access is seasonal and controlled. Name it in your inquiry and wait for confirmation."],
-      ["Can non-Muslim passengers travel this route?", "Yes, by roads that stay outside the Makkah sanctuary. Please tell us in advance."],
+      ["Can non-Muslim passengers travel this route?", "Routes must comply with Saudi access rules and are confirmed before booking."],
     ],
     links: [
       ["/saudi-arabia/jeddah-to-riyadh/", "Pickups in the city"],
@@ -284,10 +281,10 @@ export const landingPages = {
     h1: "Business transportation from Riyadh",
     intro: [
       "Work travel is judged by whether people arrive on time, prepared and together.",
-      "We coordinate private vehicles for a single executive, a visiting client or a project team, with one point of contact for the schedule.",
+      "Request private vehicles for executives, guests or teams. Available on request and subject to driver and partner confirmation.",
     ],
     blocks: [
-      points("Situations we plan for", [
+      points("Situations you can ask about", [
         ["Site visits", "Industrial gates with passes and safety rules. Send them in advance."],
         ["Delegations", "Several passengers and drop-offs on one running order."],
         ["Roadshows", "Back-to-back meetings, with realistic time between districts."],
@@ -307,7 +304,6 @@ export const landingPages = {
       list("Administration", [
         "State purchase-order or invoice needs when you inquire",
         "Ask for a written quote to attach to an approval",
-        "Share confidentiality needs so contact details are limited",
         "For cross-border work, check visas and equipment papers with your own advisers",
       ]),
     ],
@@ -327,15 +323,15 @@ export const landingPages = {
 
   "/services/family-transportation/": {
     title: "Family Transportation Riyadh | Private Cars & Vans",
-    description: "Private family travel from Riyadh with child seats on request, space for elders and luggage, and stops when you need them. Get a quote.",
+    description: "Request private family travel from Riyadh. Child seats, stops and other needs: available on request and subject to driver and partner confirmation. Get a quote.",
     h1: "Family transportation, at your family's pace",
     intro: [
-      "Families travel with prams, medicine, snacks, grandparents and opinions. A private vehicle gives all of them room.",
+      "Families travel with prams, medicine, snacks, grandparents and opinions. Choose a category according to your party and luggage.",
       "Tell us who is coming, and the plan can allow for them.",
     ],
     blocks: [
       points("Who is travelling?", [
-        ["Babies and toddlers", "Give age and weight and ask for a suitable seat. If one cannot be confirmed, bring your own."],
+        ["Babies and toddlers", "Child seats: available on request and subject to driver and partner confirmation."],
         ["Older children", "Plan a stop before they ask."],
         ["Grandparents", "Step height and legroom matter. Mention walkers and wheelchairs."],
         ["Anyone unwell", "A relative should travel with them. This is not a medical service."],
@@ -353,7 +349,7 @@ export const landingPages = {
         gmc: "Several generations in comfort.",
         van: "Large families without splitting up.",
       }),
-      prose("Journeys families often ask about",
+      prose("Journeys to consider",
         "Weekends in Khobar, relatives in Qassim, Umrah with parents, and holidays across the Gulf. Each has its own page with practical notes.",
         "For international trips, check every child's passport and consent papers early. These cause the most avoidable problems."),
       steps("Request a family trip",
@@ -365,7 +361,7 @@ export const landingPages = {
     faqs: [
       ["Are child seats provided?", "They can be requested and are subject to confirmation. Never assume one will be fitted unless your quote says so."],
       ["Will other passengers join us?", "No. The vehicle is private to your party."],
-      ["Can we stop whenever we like?", "Reasonable stops are fine. Long ones should be planned so they are included in the fare."],
+      ["Can we stop whenever we like?", "Stops: available on request and subject to driver and partner confirmation. Long ones should be planned so they are included in the fare."],
     ],
     links: [
       ["/saudi-arabia/riyadh-to-khobar/", "A weekend by the sea"],
@@ -391,11 +387,11 @@ export const landingPages = {
         ["West", "Makkah for Umrah, Jeddah for the Red Sea, with Taif on the way."],
         ["Madinah", "Reached through Qassim, with a quiet second half that needs planning."],
       ]),
-      note("Travel to the holy cities", "Makkah is open to Muslims only, and permits apply at certain times of year. The Prophet's Mosque in Madinah has its own restrictions. Check the official rules before booking."),
+      note("Travel to the holy cities", "Only Muslims may enter the Sacred Area of Makkah. Under Saudi eVisa terms, non-Muslims may not enter the Holy Mosque in Makkah or the Prophet's Mosque in Madinah, or their premises. Madinah city and the mosque are separate matters. Seasonal rules change, so check official Saudi sources before travelling. Check the official rules before booking."),
       steps("From this page to a booking",
         ["Open your route", "Outbound or return."],
         ["Note what to send", "Each page lists the useful details."],
-        ["Request a quote", "The form opens with the cities filled in."]),
+        ["Request a quote", "The form on each route page opens with the cities filled in."]),
     ],
     faqs: [
       ["My city is not listed. Can I still ask?", "Yes. Send the request through the booking form and you will be told whether it can be arranged."],
@@ -410,7 +406,7 @@ export const landingPages = {
 
   "/international-transfers/": {
     title: "International Transfers from Riyadh | GCC by Private Car",
-    description: "Private cross-border transfers between Riyadh and Bahrain, Doha, Dubai, Abu Dhabi, Kuwait and Muscat. Compare borders and prepare documents.",
+    description: "Request private cross-border journeys between Riyadh and Bahrain, Doha, Dubai, Abu Dhabi and Kuwait, or a feasibility check for Muscat. Compare borders and prepare documents.",
     h1: "International transfers between Riyadh and the GCC",
     intro: [
       "Five countries can be reached by road from Riyadh, through very different borders: a causeway, a single desert post, a choice of two.",
@@ -430,13 +426,13 @@ export const landingPages = {
         "Children's documents and parental consent",
         "Customs limits in both countries, including medicines",
         "Border status on the day of travel",
-      ], "Each person is responsible for their own documents. We can point out common questions, but cannot give legal or visa advice."),
+      ], "We cannot give legal, immigration or visa advice."),
       prose("The vehicle crosses too",
         "Passengers are only half of a border crossing. The driver and vehicle need insurance and permissions for the country concerned, so a category is confirmed only when an eligible partner is available.",
         "For this reason, wait for confirmation before paying for non-refundable hotels or events."),
       note("No guarantees at the border", "Entry, inspection and waiting times are decided by the authorities. No booking can guarantee clearance."),
       vehicleOptions("Vehicles for cross-border travel", "You may spend time in the car at the crossing.", {
-        sedan: "Short trips such as Bahrain.",
+        sedan: "Light luggage and small parties.",
         suv: "Families with luggage.",
         gmc: "Longer distances and executive travel.",
         van: "Groups, subject to permissions.",
@@ -444,7 +440,7 @@ export const landingPages = {
     ],
     faqs: [
       ["Can you arrange my visa?", "No. Please use official government portals or a licensed agency."],
-      ["Which destination is simplest by road?", "Bahrain is the nearest, with one integrated border area. Oman takes the most planning."],
+      ["Which destination is simplest by road?", "Each crossing differs. Oman takes the most planning."],
       ["Can I visit two countries in one trip?", "Possibly. Describe the full itinerary, as each border adds its own conditions."],
     ],
     links: [

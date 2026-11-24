@@ -11,7 +11,7 @@ export function PopularRoutes() {
     <section aria-labelledby="routes-heading" className="py-20 lg:py-28">
       <div className="shell">
         <div className="max-w-2xl">
-          <h2 id="routes-heading" className="text-section">Popular routes from Riyadh</h2>
+          <h2 id="routes-heading" className="text-section">Routes from Riyadh</h2>
           <p className="mt-4 text-lg">One vehicle and one direct journey, from your pickup address to your destination.</p>
         </div>
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-20">

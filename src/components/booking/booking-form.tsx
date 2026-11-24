@@ -5,6 +5,8 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useEffect, useId, useRef, useState } from "react";
 import { useForm, useWatch, type FieldPath } from "react-hook-form";
 import { buttonClass } from "@/components/ui/button-class";
+import { site } from "@/config/site";
+import { linkFor } from "@/config/urls";
 import { cn } from "@/lib/utils/cn";
 import { bookingFormSchema, riyadhToday, type BookingInput } from "@/lib/validation/booking";
 import { BookingReview } from "./booking-review";
@@ -22,6 +24,7 @@ const minToday = (e: React.FocusEvent<HTMLInputElement>) => { e.currentTarget.mi
 
 export function BookingForm({ places, vehicles, pickup = "Riyadh", destination = "" }: { places: string[]; vehicles: string[]; pickup?: string; destination?: string }) {
   const uid = useId();
+  const privacy = linkFor("/privacy-policy/");
   const [step, setStep] = useState(0);
   const [result, setResult] = useState<BookingInput | null>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -81,6 +84,8 @@ export function BookingForm({ places, vehicles, pickup = "Riyadh", destination =
       </div>
       <p className="mt-4 text-sm text-muted">Step {step + 1} of {steps.length}</p>
       <h2 ref={heading} tabIndex={-1} className="text-xl text-navy outline-none">{steps[step].title}</h2>
+      {!site.formSubmissionsEnabled && <p className="mt-2 text-sm">Online requests are not open yet. You can prepare your details here; nothing is sent.</p>}
+      {privacy && <p className="mt-2 text-sm">Read the <a href={privacy} className="font-semibold text-royal underline underline-offset-4">privacy policy</a> before entering your details.</p>}
 
       <div className={panel(0)}>
         <datalist id={`${uid}-places`}>{places.map((p) => <option key={p} value={p} />)}</datalist>

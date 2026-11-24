@@ -18,10 +18,10 @@ export default function BookTransportPage() {
         <div className="mt-8 grid items-start gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
           <div>
             <h1 className="text-section text-navy">Request your private transfer</h1>
-            <p className="mt-4 text-lg">Tell us about the journey. You receive a vehicle and fare confirmation to review before anything is booked.</p>
+            <p className="mt-4 text-lg">Tell us about the journey. Availability is checked first, and a vehicle category and fare are shared for your review before anything is booked.</p>
             <ul className="mt-8 space-y-4 border-l-2 border-gold pl-5">
               <li>An inquiry is not a confirmed booking and takes no payment.</li>
-              <li>For airport journeys, add your flight number and terminal in the requirements.</li>
+              <li>Airport pickup and drop-off are not confirmed. Please ask before planning around them.</li>
               <li>For cross-border trips, check that every passenger has valid documents and entry permission.</li>
             </ul>
           </div>
