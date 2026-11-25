@@ -19,8 +19,8 @@ export const site = {
     /** General contact. New inquiries are sent to booking@ (NOTIFY_TO_EMAIL). */
     email: contactEnabled ? "info@riyadhtransportgroup.com" : null,
   },
-  /** Search engines may index the site. Off until launch sign-off: every page is noindex and the sitemap is empty. */
-  indexingEnabled: process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true",
+  /** Search engines may index the site. "false" makes every page noindex and empties the sitemap. */
+  indexingEnabled: process.env.NEXT_PUBLIC_INDEXING_ENABLED !== "false",
   social: [] as { label: string; href: string }[],
   areaServed: ["Saudi Arabia", "Bahrain", "Qatar", "United Arab Emirates", "Kuwait", "Oman"],
 };

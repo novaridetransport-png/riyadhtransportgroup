@@ -7,7 +7,7 @@ import { registry, indexablePaths, breadcrumbTrail, returnPath, linkFor, isPubli
 const base = process.env.BASE_URL ?? "http://localhost:3000";
 const origin = "https://riyadhtransportgroup.com";
 const errors = [];
-const indexing = process.env.NEXT_PUBLIC_INDEXING_ENABLED === "true";
+const indexing = process.env.NEXT_PUBLIC_INDEXING_ENABLED !== "false";
 const seen = { title: new Map(), description: new Map(), h1: new Map() };
 const texts = new Map();
 const get = (p) => fetch(base + p, { redirect: "manual" });
