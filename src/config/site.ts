@@ -1,5 +1,5 @@
-/** Call and WhatsApp links. Off until licensing and the privacy notice are settled. */
-const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED === "true";
+/** Call, WhatsApp and email links. On unless the variable is set to "false". */
+const contactEnabled = process.env.NEXT_PUBLIC_CONTACT_ENABLED !== "false";
 
 /** Business facts. `null` means "not supplied or verified": the UI hides it. */
 export const site = {

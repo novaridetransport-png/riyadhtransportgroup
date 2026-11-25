@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: { default: site.name, template: `%s | ${site.name}` },
   description: site.description,
   formatDetection: { telephone: false },
+  verification: { google: "4sSUjxGnT6kWAPZuOXUUTJTB_ZEfqaJemwky8nrD-Ng" },
 };
 export const viewport: Viewport = { themeColor: "#101b32" };
 
