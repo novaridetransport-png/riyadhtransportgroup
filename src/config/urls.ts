@@ -127,7 +127,7 @@ export const registry = {
 } satisfies Record<string, PageEntry>;
 
 /** Internal tools: never linked, indexed or listed in the sitemap. 404 until Supabase is configured. */
-export const utilityPaths = { admin: "/admin/", adminLogin: "/admin/login/" } as const;
+export const utilityPaths = { admin: "/admin/", adminLogin: "/admin/login/", documents: "/admin/documents/", settings: "/admin/settings/" } as const;
 
 export type PagePath = keyof typeof registry;
 export type SaudiRoutePath = Extract<PagePath, `/saudi-arabia/${string}-to-${string}/`>;

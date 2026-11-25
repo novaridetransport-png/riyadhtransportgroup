@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { removeInquiry, updateStatus } from "./actions";
-import { LogoutButton } from "@/components/admin/logout-button";
+import { AdminNav } from "@/components/admin/admin-nav";
+import { CreateButtons } from "@/components/admin/documents/create-buttons";
 import { buttonClass } from "@/components/ui/button-class";
 import { utilityPaths } from "@/config/urls";
 import { isStatus, listInquiries, requireAdmin, statuses, type Inquiry } from "@/lib/admin/supabase";
@@ -43,6 +44,7 @@ function Card({ row }: { row: Inquiry }) {
           </label>
           <button className={cn(buttonClass("secondary"), small)}>Save</button>
         </form>
+        <CreateButtons types={["quotation", "invoice"]} inquiryId={row.id} prefix="Make" />
         <details>
           <summary className="flex min-h-11 items-center text-sm font-semibold text-danger">Delete</summary>
           <form action={removeInquiry} className="mt-2 flex flex-wrap items-center gap-3">
@@ -64,10 +66,8 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
   const { rows, more } = await listInquiries(token, status, page);
   return (
     <>
-      <div className="flex flex-wrap items-center justify-between gap-4">
-        <h1 className="text-section text-navy">Inquiries</h1>
-        <LogoutButton className={cn(buttonClass("secondary"), small)} />
-      </div>
+      <AdminNav current="inquiries" />
+      <h1 className="mt-6 text-section text-navy">Inquiries</h1>
       <nav aria-label="Filter by status" className="mt-6 flex flex-wrap gap-2">
         {[null, ...statuses].map((s) => (
           <Link key={s ?? "all"} href={href(s, 1)} prefetch={false} aria-current={s === status ? "page" : undefined}

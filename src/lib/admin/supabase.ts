@@ -22,7 +22,7 @@ function config() {
 }
 export const requireConfigured = () => void config();
 
-async function call(path: string, token: string | null, init: RequestInit = {}) {
+export async function adminFetch(path: string, token: string | null, init: RequestInit = {}) {
   const { url, key } = config();
   return fetch(new URL(path, url), {
     ...init,
@@ -34,14 +34,14 @@ async function call(path: string, token: string | null, init: RequestInit = {}) 
 
 /** True only when the database confirms the token belongs to a listed admin. */
 async function isAdmin(token: string) {
-  const res = await call("/rest/v1/admins?select=user_id", token);
+  const res = await adminFetch("/rest/v1/admins?select=user_id", token);
   return res.ok && ((await res.json()) as unknown[]).length === 1;
 }
 
 /** Returns an error code, or null after setting the session cookie. */
 export async function signIn(email: string, password: string): Promise<"invalid" | "unavailable" | null> {
   try {
-    const res = await call("/auth/v1/token?grant_type=password", null, { method: "POST", body: JSON.stringify({ email, password }) });
+    const res = await adminFetch("/auth/v1/token?grant_type=password", null, { method: "POST", body: JSON.stringify({ email, password }) });
     if (res.status >= 500) return "unavailable";
     if (!res.ok) return "invalid";
     const { access_token: token, expires_in: maxAge } = (await res.json()) as { access_token: string; expires_in: number };
@@ -57,7 +57,14 @@ export async function signOut() {
   const jar = await cookies();
   const token = jar.get(COOKIE)?.value;
   jar.delete({ name: COOKIE, path: utilityPaths.admin });
-  if (token) await call("/auth/v1/logout?scope=local", token, { method: "POST" }).catch(() => null);
+  if (token) await adminFetch("/auth/v1/logout?scope=local", token, { method: "POST" }).catch(() => null);
+}
+
+/** The signed-in admin's token, or null. For route handlers, which answer with a status instead of redirecting. */
+export async function currentAdmin(): Promise<string | null> {
+  config();
+  const token = (await cookies()).get(COOKIE)?.value;
+  return token && (await isAdmin(token)) ? token : null;
 }
 
 /** Guards every admin page and action. The database enforces the same rule again. */
@@ -72,14 +79,14 @@ export const PAGE_SIZE = 25;
 export async function listInquiries(token: string, status: Status | null, page: number): Promise<{ rows: Inquiry[]; more: boolean }> {
   const query = new URLSearchParams({ select: "*", order: "created_at.desc,id", limit: String(PAGE_SIZE + 1), offset: String((page - 1) * PAGE_SIZE) });
   if (status) query.set("status", `eq.${status}`);
-  const res = await call(`/rest/v1/inquiries?${query}`, token);
+  const res = await adminFetch(`/rest/v1/inquiries?${query}`, token);
   if (!res.ok) throw new Error(`Inquiry list failed with status ${res.status}`);
   const rows = (await res.json()) as Inquiry[];
   return { rows: rows.slice(0, PAGE_SIZE), more: rows.length > PAGE_SIZE };
 }
 
 async function change(token: string, id: string, init: RequestInit) {
-  const res = await call(`/rest/v1/inquiries?id=eq.${encodeURIComponent(id)}`, token, { ...init, headers: { Prefer: "return=minimal" } });
+  const res = await adminFetch(`/rest/v1/inquiries?id=eq.${encodeURIComponent(id)}`, token, { ...init, headers: { Prefer: "return=minimal" } });
   if (!res.ok) throw new Error(`Inquiry change failed with status ${res.status}`);
 }
 export const setStatus = (token: string, id: string, status: Status) => change(token, id, { method: "PATCH", body: JSON.stringify({ status }) });
