@@ -1,5 +1,6 @@
 import { BookingForm } from "@/components/booking/booking-form";
 import { Breadcrumbs } from "@/components/navigation/breadcrumbs";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { placeSuggestions } from "@/config/routes";
 import { vehicles } from "@/config/vehicles";
 import { pageMetadata } from "@/lib/seo/metadata";
@@ -24,6 +25,7 @@ export default function BookTransportPage() {
               <li>Airport pickup and drop-off are not confirmed. Please ask before planning around them.</li>
               <li>For cross-border trips, check that every passenger has valid documents and entry permission.</li>
             </ul>
+            <div className="mt-8 flex flex-wrap gap-3"><WhatsAppButton variant="secondary" /></div>
           </div>
           <BookingForm places={placeSuggestions} vehicles={vehicles.map((v) => v.name)} />
         </div>
