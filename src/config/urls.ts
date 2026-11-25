@@ -53,7 +53,7 @@ export const registry = {
   "/vehicles/": main("Vehicle Categories"),
   "/faqs/": main("Frequently Asked Questions"),
   "/book-transport/": main("Book Your Ride", "published", false),
-  "/privacy-policy/": main("Privacy Policy"),
+  "/privacy-policy/": main("Privacy Policy", "published"),
   "/terms-and-conditions/": main("Terms & Conditions"),
   "/cancellation-policy/": main("Cancellation Policy"),
 

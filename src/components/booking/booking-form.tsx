@@ -122,7 +122,7 @@ export function BookingForm({ places, vehicles, pickup = "Riyadh", destination =
       <div className="mt-6 flex gap-3">
         {step > 0 && <button type="button" onClick={() => goTo(step - 1)} className={cn(buttonClass("secondary"), "!px-4")}><ArrowLeft className="size-5" aria-hidden="true" />Back</button>}
         <button type="submit" className={cn(buttonClass(), "flex-1")}>
-          {step < 2 ? <>Continue<ArrowRight className="size-5" aria-hidden="true" /></> : "Review my inquiry"}
+          {step < 2 ? <>Continue<ArrowRight className="size-5" aria-hidden="true" /></> : "Review and submit"}
         </button>
       </div>
     </form>

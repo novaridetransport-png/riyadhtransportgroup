@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { formSubmissionsEnabled } from "@/config/flags";
 import { notifyNewInquiry } from "@/lib/email/notify";
+import { withinInquiryLimit } from "@/lib/rate-limit";
 import { bookingFormSchema } from "@/lib/validation/booking";
 
 const MAX_BYTES = 10_000;
@@ -16,6 +17,7 @@ export async function POST(request: Request) {
   if (!origin || !URL.canParse(origin) || new URL(origin).host !== request.headers.get("host")) return reply(403, "forbidden");
   if (!request.headers.get("content-type")?.startsWith("application/json")) return reply(415, "unsupported");
 
+  if (!(await withinInquiryLimit(request))) return reply(429, "too_many");
   const raw = await request.text();
   if (new TextEncoder().encode(raw).length > MAX_BYTES) return reply(413, "too_large");
   let json: unknown;

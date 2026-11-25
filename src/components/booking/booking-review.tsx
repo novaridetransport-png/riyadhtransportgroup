@@ -11,7 +11,7 @@ export function BookingReview({ booking, headingRef, onEdit }: { booking: Bookin
   const enabled = formSubmissionsEnabled;
   const [id] = useState(() => crypto.randomUUID());
   const [website, setWebsite] = useState("");
-  const [state, setState] = useState<"idle" | "sending" | "sent" | "failed">("idle");
+  const [state, setState] = useState<"idle" | "sending" | "sent" | "failed" | "busy">("idle");
   const [copied, setCopied] = useState<"idle" | "ok" | "failed">("idle");
   const rows = bookingSummary(booking);
 
@@ -20,7 +20,7 @@ export function BookingReview({ booking, headingRef, onEdit }: { booking: Bookin
     setState("sending");
     try {
       const res = await fetch("/api/inquiries/", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, website, booking }) });
-      setState(res.ok ? "sent" : "failed");
+      setState(res.ok ? "sent" : res.status === 429 ? "busy" : "failed");
     } catch { setState("failed"); }
   };
   const copy = async () => {
@@ -28,16 +28,17 @@ export function BookingReview({ booking, headingRef, onEdit }: { booking: Bookin
     try { await navigator.clipboard.writeText(text); setCopied("ok"); } catch { setCopied("failed"); }
   };
 
-  const lead = state === "sent" ? "We have received your inquiry. It is not a confirmed booking."
-    : enabled ? "Not sent yet. Check the details, then send your inquiry."
+  const lead = state === "sent" ? "Thank you. We have received your request and will contact you. It is not a confirmed booking."
+    : enabled ? "Not sent yet. Check the details, then press Submit request."
     : "Not sent. Online submission is not available yet, but you can copy these details.";
-  const status = state === "failed" ? "Your inquiry could not be sent. Please try again, or copy the details."
+  const status = state === "busy" ? "Too many requests in a short time. Please wait a minute and try again."
+    : state === "failed" ? "Your request could not be sent. Please try again, or copy the details."
     : copied === "ok" ? "Details copied to your clipboard."
     : copied === "failed" ? "Copying was blocked by your browser. Please select the text above." : "";
 
   return (
     <div className="on-light rounded-xl bg-white p-5 text-body shadow-card sm:p-7">
-      <h2 ref={headingRef} tabIndex={-1} className="text-xl text-navy outline-none">{state === "sent" ? "Inquiry received" : "Check your inquiry"}</h2>
+      <h2 ref={headingRef} tabIndex={-1} className="text-xl text-navy outline-none">{state === "sent" ? "Request received" : "Check your request"}</h2>
       <p role="status" className="mt-2 font-medium">{lead}</p>
       <dl className="mt-5 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 text-[.95rem]">
         {rows.map(([k, v]) => <div key={k} className="contents"><dt className="text-muted">{k}</dt><dd className="min-w-0 font-medium wrap-anywhere text-navy">{v}</dd></div>)}
@@ -45,7 +46,7 @@ export function BookingReview({ booking, headingRef, onEdit }: { booking: Bookin
       {enabled && <input type="text" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] size-px opacity-0" />}
       <div className="mt-6 flex flex-wrap gap-3">
         {enabled && state !== "sent" && (
-          <button type="button" onClick={send} disabled={state === "sending"} className={buttonClass()}><Send className="size-5" aria-hidden="true" />{state === "sending" ? "Sending" : "Send inquiry"}</button>
+          <button type="button" onClick={send} disabled={state === "sending"} className={buttonClass()}><Send className="size-5" aria-hidden="true" />{state === "sending" ? "Sending" : "Submit request"}</button>
         )}
         <button type="button" onClick={copy} className={buttonClass(enabled ? "secondary" : "primary")}>{copied === "ok" ? <Check className="size-5" aria-hidden="true" /> : <Copy className="size-5" aria-hidden="true" />}{copied === "ok" ? "Copied" : "Copy details"}</button>
         {state !== "sent" && <button type="button" onClick={onEdit} disabled={state === "sending"} className={buttonClass("secondary")}>Edit</button>}
