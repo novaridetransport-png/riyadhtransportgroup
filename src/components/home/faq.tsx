@@ -1,4 +1,5 @@
 import { Plus } from "lucide-react";
+import { PageLink } from "@/components/ui/page-link";
 import { homeFaqs } from "@/config/faqs";
 
 export function Faq() {
@@ -15,6 +16,7 @@ export function Faq() {
               <p className="max-w-2xl pb-6 leading-relaxed">{f.a}</p>
             </details>
           ))}
+          <p className="mt-6"><PageLink href="/faqs/" className="font-semibold text-royal underline underline-offset-4">See all questions</PageLink></p>
         </div>
       </div>
     </section>

@@ -20,6 +20,9 @@ export const organizationLd = {
       slogan: site.positioning,
       description: site.description,
       ...(site.contact.phone && { telephone: site.contact.phone }),
+      ...((site.contact.phone || site.contact.email) && {
+        contactPoint: [{ "@type": "ContactPoint", contactType: "customer service", ...(site.contact.phone && { telephone: site.contact.phone }), ...(site.contact.email && { email: site.contact.email }), availableLanguage: ["English"] }],
+      }),
       ...(site.contact.email && { email: site.contact.email }),
       ...(site.social.length > 0 && { sameAs: site.social.map((s) => s.href) }),
     },

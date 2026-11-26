@@ -49,9 +49,9 @@ export const registry = {
   // Main pages
   "/": main("Home", "published"),
   "/about-us/": main("About Us"),
-  "/contact-us/": main("Contact Us"),
+  "/contact-us/": main("Contact Us", "published"),
   "/vehicles/": main("Vehicle Categories"),
-  "/faqs/": main("Frequently Asked Questions"),
+  "/faqs/": main("Frequently Asked Questions", "published"),
   "/book-transport/": main("Book Your Ride", "published", false),
   "/privacy-policy/": main("Privacy Policy", "published"),
   "/terms-and-conditions/": main("Terms & Conditions"),
@@ -142,7 +142,6 @@ export const indexablePaths = () => allPaths.filter((p) => isPublished(p) && get
 /** Homepage sections that stand in for pages which are not built yet. */
 const sectionFallbacks: Partial<Record<PagePath, string>> = {
   "/vehicles/": "/#vehicles",
-  "/faqs/": "/#faq",
 };
 
 /** Where a link should point, or null when there is nothing live to link to. */
