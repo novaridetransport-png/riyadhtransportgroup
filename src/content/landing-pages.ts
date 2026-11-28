@@ -144,12 +144,12 @@ export const landingPages = {
   },
 
   "/services/airport-transfers/": {
-    title: "Airport Transfers with Intercity Travel | Ask First",
-    description: "Planning an intercity journey around a flight? Airport pickup and drop-off are not confirmed yet. See what to ask before you book.",
-    h1: "Airport transfers linked to your Riyadh journey",
+    title: "Airport Transfers in Saudi Arabia | Riyadh, Jeddah, Madinah, Dammam",
+    description: "Private airport pickup and drop-off at Riyadh (RUH), Jeddah (JED), Madinah (MED) and Dammam (DMM), to the city or straight on to another city.",
+    h1: "Airport transfers in Saudi Arabia",
     intro: [
-      "Sometimes the best flight does not land where you live, and an intercity drive completes the trip.",
-      "No airport service is confirmed yet. Please ask before planning a journey around a flight.",
+      "Private pickup and drop-off at four Saudi airports: Riyadh, Jeddah, Madinah and Dammam. Go into the city, or straight on to another one without changing cars.",
+      "Choose your airport below for local details.",
     ],
     blocks: [
       points("Before you book, send", [
@@ -158,15 +158,15 @@ export const landingPages = {
         ["Checked bags", "Number and size, with any sports or medical equipment."],
         ["A working mobile number", "Roaming or local, reachable on landing."],
       ]),
-      steps("If an arrival pickup is confirmed",
-        ["Agree a meeting point", "Only a lawful point confirmed to you in advance."],
+      steps("How an arrival pickup works",
+        ["Agree a meeting point", "Agreed with you in advance, following the airport's rules."],
         ["Land and clear", "Immigration and baggage take as long as they take."],
         ["Make contact", "Message when you have your bags."],
         ["Drive on", "Directly to your address."]),
       prose("Planning a departure",
         "Give us your check-in deadline rather than the take-off time. On a long drive to an airport, the margin must cover traffic, a stop and the unexpected.",
         "For early flights, travelling the evening before is safer than driving through the night."),
-      note("Confirmation matters", "Airport access and pickup rules vary. A pickup is arranged only when it has been confirmed to you for that airport, date and terminal."),
+      note("Other airports", "Airports in Bahrain, Qatar, the UAE, Kuwait and Oman are not covered by these pages. Ask before planning a journey around a flight there."),
       vehicleOptions("Luggage first", "Check luggage space carefully.", {
         sedan: "Two travellers with one case each.",
         suv: "Several cases.",
@@ -175,105 +175,22 @@ export const landingPages = {
       }),
     ],
     faqs: [
-      ["What about King Khalid International in Riyadh?", "There is no dedicated Riyadh airport page yet. Airport access at Riyadh is not confirmed."],
+      ["Can I go from the airport straight to another city?", "Yes. Give the final address and it is quoted as one journey."],
       ["Is waiting time free?", "Waiting terms are set out in each quote. Please read them before confirming."],
     ],
     links: [
-      ["/services/airport-transfers/dammam-airport/", "King Fahd International (DMM)"],
+      ["/services/airport-transfers/riyadh-airport/", "King Khalid International (RUH)"],
       ["/services/airport-transfers/jeddah-airport/", "King Abdulaziz International (JED)"],
-      ["/services/intercity-transfers/", "The drive itself"],
+      ["/services/airport-transfers/madinah-airport/", "Prince Mohammad bin Abdulaziz International (MED)"],
+      ["/services/airport-transfers/dammam-airport/", "King Fahd International (DMM)"],
+      ["/services/intercity-transfers/", "Intercity transfers"],
     ],
     cta: { title: "Have a flight booked?", text: "Send the number and your address at the other end." },
   },
 
-  "/services/airport-transfers/dammam-airport/": {
-    title: "Dammam Airport (DMM) to Riyadh | Private Pickup & Drop-off",
-    description: "Journeys between Riyadh and King Fahd International Airport, Dammam. Airport service is not yet confirmed.",
-    h1: "Dammam Airport transfers to and from Riyadh",
-    intro: [
-      "King Fahd International (DMM) serves the whole Eastern Province, and some Riyadh travellers may use its flights.",
-      "Airport service is not yet confirmed.",
-    ],
-    blocks: [
-      prose("Where the airport is",
-        "DMM lies well outside Dammam, to the north-west of the city. For a Riyadh journey that is convenient: there is no need to enter Dammam or Khobar before joining the road to the capital.",
-        "If you have a stop to make in either city, list it, as it takes you in the opposite direction."),
-      steps("Arriving at DMM",
-        ["Share the flight", "Number, origin and bags."],
-        ["Ask about a meeting point", "Airport access is not confirmed yet."],
-        ["Message on landing", "And again when you leave customs."],
-        ["Travel to Riyadh", "With a break if you wish."]),
-      steps("Departing from DMM",
-        ["Give the check-in deadline", "It decides when you leave Riyadh."],
-        ["Add a margin", "Enough for a stop and slow traffic at the city's edge."],
-        ["Name the airline", "With your departure details."]),
-      vehicleOptions("Vehicles for airport luggage", "Tell us bag sizes, not only the count.", {
-        sedan: "One or two passengers.",
-        suv: "Families with large suitcases.",
-        gmc: "Executives and visitors after a long flight.",
-        van: "Crews and groups.",
-      }),
-      list("Good to have ready", [
-        "Visa or residence papers for entering Saudi Arabia",
-        "Local currency or card for refreshments",
-        "The Riyadh address in Arabic, or a pin",
-        "A second contact, in case your phone has no service",
-      ]),
-    ],
-    faqs: [
-      ["Do you cover Dammam Airport to Khobar or Dhahran only?", "This page is for journeys connected with Riyadh. Local transfers are not currently listed."],
-      ["What if I miss my flight?", "Tell us at once. Rearrangement depends on availability and the terms of your quote."],
-      ["Can I be met inside the terminal?", "Ask in your inquiry. It depends on what can be confirmed for that day."],
-    ],
-    links: [
-      ["/saudi-arabia/dammam-to-riyadh/", "Pickups elsewhere in Dammam"],
-      ["/saudi-arabia/riyadh-to-dammam/", "Travelling to the city"],
-      ["/services/airport-transfers/", "How airport journeys work"],
-    ],
-    cta: { title: "Flying through Dammam?", text: "Send the flight number and your Riyadh address." },
-  },
 
-  "/services/airport-transfers/jeddah-airport/": {
-    title: "Jeddah Airport (JED) to Riyadh by Car | Private Transfer",
-    description: "Journeys between Riyadh and King Abdulaziz International Airport, Jeddah. Airport service is not yet confirmed.",
-    h1: "Jeddah Airport transfers to and from Riyadh",
-    intro: [
-      "Riyadh to King Abdulaziz International (JED) is a cross-country drive, so this transfer is for particular cases: heavy luggage, a group, or a missed connection.",
-      "Airport service is not yet confirmed.",
-    ],
-    blocks: [
-      note("Check your terminal twice", "Terminal assignments at JED have been changing, and seasonal pilgrim terminals operate at certain times. Use the terminal on your latest airline confirmation, and send any update before travelling."),
-      points("When it makes sense", [
-        ["More baggage than an airline allows", "Moving home or returning from a long stay."],
-        ["Groups", "One van rather than several domestic tickets."],
-        ["Domestic flights are full", "Typical at holidays, when roads are busy too."],
-      ]),
-      prose("Planning a long airport drive",
-        "After an international flight, nobody should sit in a car all night without rest. A hotel in Jeddah or Taif and a morning start is often kinder.",
-        "Towards an airport, aim to reach Jeddah the day before. A long road and a fixed check-in do not mix."),
-      vehicleOptions("Recommended vehicles", "Pick generously for this distance.", {
-        sedan: "Two people with little luggage.",
-        suv: "Families of modest size.",
-        gmc: "Long-distance comfort after a flight.",
-        van: "Groups and large loads.",
-      }),
-      steps("Arrange it",
-        ["Flight, terminal and bags", "Plus the number of passengers."],
-        ["Rest preference", "Straight through or overnight."],
-        ["Review the quote", "And its waiting terms."]),
-    ],
-    faqs: [
-      ["Would a domestic flight be better?", "For one traveller with normal luggage, probably yes. The car is for situations a flight handles badly."],
-      ["Can you collect from the Hajj terminal?", "Access is seasonal and controlled. Name it in your inquiry and wait for confirmation."],
-      ["Can non-Muslim passengers travel this route?", "Routes must comply with Saudi access rules and are confirmed before booking."],
-    ],
-    links: [
-      ["/saudi-arabia/jeddah-to-riyadh/", "Pickups in the city"],
-      ["/saudi-arabia/riyadh-to-jeddah/", "Driving to the coast"],
-      ["/saudi-arabia/riyadh-to-makkah/", "Travelling for Umrah"],
-    ],
-    cta: { title: "Landing in Jeddah?", text: "Share the flight, bags and whether you want a night's rest." },
-  },
+
+
 
   "/services/business-transportation/": {
     title: "Business Transportation Riyadh | Executive & Team Travel",
@@ -374,11 +291,11 @@ export const landingPages = {
 
   "/saudi-arabia/": {
     title: "Saudi Arabia Routes from Riyadh | Private Transfers",
-    description: "Directory of private routes between Riyadh and Dammam, Khobar, Qassim, Buraydah, Unaizah, Jeddah, Makkah and Madinah, both directions.",
-    h1: "Private routes between Riyadh and Saudi cities",
+    description: "Private routes from and to Riyadh, Dammam, Khobar, Qassim, Jeddah, Makkah and Madinah, plus Jeddah, Makkah and Madinah transfers for pilgrims.",
+    h1: "Private routes across Saudi Arabia",
     intro: [
       "Riyadh sits near the middle of the Kingdom, which makes it a natural starting point in three directions: the Gulf coast, Qassim and the west.",
-      "Choose a city for local drop-off notes, road information and booking details.",
+      "Between Jeddah, Makkah and Madinah there are separate routes for pilgrims and visitors. Choose a route for local notes and booking details.",
     ],
     blocks: [
       points("Choose by direction", [

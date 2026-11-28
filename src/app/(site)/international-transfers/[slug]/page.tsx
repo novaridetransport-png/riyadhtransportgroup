@@ -25,5 +25,5 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Page({ params }: Props) {
   const { path, content } = await resolve(params);
-  return <ContentPage path={path} content={content} opposite={content.opposite}><BorderNotice enteringSaudi={getPage(path).route?.direction === "return"} /></ContentPage>;
+  return <ContentPage path={path} content={content} opposite={content.opposite}><BorderNotice enteringSaudi={getPage(path).route?.toCountry === "Saudi Arabia"} /></ContentPage>;
 }

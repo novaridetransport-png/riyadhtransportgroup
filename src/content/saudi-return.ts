@@ -32,7 +32,7 @@ export const saudiReturn = {
         ["Meet your driver", "At the agreed point."]),
     ],
     faqs: [
-      ["Do you collect from King Fahd International Airport?", "Airport pickup is not confirmed. Please ask before planning around it."],
+      ["Do you collect from King Fahd International Airport?", "Yes. Send your flight number and bags; see Dammam airport transfers for details."],
       ["Can you drop passengers at two Riyadh addresses?", "Yes, when both are listed in the inquiry."],
       ["Can I travel at night?", "Ask for the time you want. Night driving depends on driver availability and rest."],
     ],
@@ -81,7 +81,7 @@ export const saudiReturn = {
     faqs: [
       ["Can I book the return when I book the outward trip?", "You can select Return. Available on request and subject to driver and partner confirmation."],
       ["Can two families split one van?", "If you book together as one party, yes. We do not combine strangers."],
-      ["Can I be dropped at Riyadh airport?", "Airport drop-off in Riyadh is not confirmed. Please ask before planning around it."],
+      ["Can I be dropped at Riyadh airport?", "Yes. Give your flight time so the drop-off allows for traffic and check-in."],
     ],
     links: [
       ["/saudi-arabia/dammam-to-riyadh/", "Pickups in Dammam itself"],
@@ -269,7 +269,7 @@ export const saudiReturn = {
         ["Depart", "With any confirmed stops."]),
     ],
     faqs: [
-      ["Can I be picked up at Jeddah airport?", "Jeddah airport pickup is not confirmed. Please ask before planning around it."],
+      ["Can I be picked up at Jeddah airport?", "Yes. Share your flight number and terminal, as terminal assignments at JED have been changing."],
       ["Who pays for the driver's overnight stay?", "If an overnight is part of the plan, the quote will state what it includes."],
       ["Is it safe to drive at night?", "We recommend daylight for the mountain section near Taif and a rested driver throughout."],
     ],
@@ -367,7 +367,7 @@ export const saudiReturn = {
         ["Travel", "Home to your door in Riyadh."]),
     ],
     faqs: [
-      ["Can we start at Madinah airport or station?", "Airport pickup at Madinah is not confirmed. Ask about other pickups; they are subject to confirmation."],
+      ["Can we start at Madinah airport or station?", "Yes. Send your flight or train arrival time."],
       ["Where is the best place to stop overnight?", "Buraydah and Unaizah both have hotels and are close to the point where the route turns towards Riyadh."],
       ["Can dates and gifts be carried?", "Yes, within the vehicle's space. Include boxes in the luggage count."],
     ],

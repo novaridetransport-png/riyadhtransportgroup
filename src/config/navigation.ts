@@ -17,7 +17,7 @@ export const servicesNav: NavGroup = {
 };
 export const saudiNav: NavGroup = {
   label: "Saudi Arabia",
-  links: [...links(...publishedRoutes("/saudi-arabia/", "outbound")), ...relabel("/saudi-arabia/", "All Saudi routes")],
+  links: [...links(...publishedRoutes("/saudi-arabia/", "outbound"), "/saudi-arabia/jeddah-to-makkah/", "/saudi-arabia/makkah-to-madinah/"), ...relabel("/saudi-arabia/", "All Saudi routes")],
 };
 export const internationalNav: NavGroup = {
   label: "International",

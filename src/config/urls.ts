@@ -21,7 +21,10 @@ export interface RouteInfo {
   destination: string;
   /** Country at the non-Riyadh end of the journey */
   country: Country;
-  direction: "outbound" | "return";
+  fromCountry: Country;
+  toCountry: Country;
+  /** Relative to the Riyadh hub; "between" routes neither start nor end in Riyadh */
+  direction: "outbound" | "return" | "between";
 }
 export interface PageEntry {
   /** Page title used in navigation, breadcrumbs and link lists */
@@ -36,13 +39,17 @@ export interface PageEntry {
 const page = (label: string, type: PageType, status: PageStatus = "published", index = true): PageEntry => ({ label, type, status, index });
 const main = (label: string, status: PageStatus = "planned", index = true) => page(label, "main", status, index);
 const vehicle = (label: string) => page(label, "vehicle", "planned");
-const airport = (label: string) => page(label, "airport", "unconfirmed");
+const airport = (label: string, status: PageStatus = "unconfirmed") => page(label, "airport", status);
 const reserved = (label: string) => page(label, "directory", "unconfirmed");
 const out = (destination: string, country: Country = "Saudi Arabia"): PageEntry => ({
-  ...page(`Riyadh to ${destination}`, "route"), route: { origin: "Riyadh", destination, country, direction: "outbound" },
+  ...page(`Riyadh to ${destination}`, "route"), route: { origin: "Riyadh", destination, country, fromCountry: "Saudi Arabia", toCountry: country, direction: "outbound" },
 });
 const back = (origin: string, country: Country = "Saudi Arabia"): PageEntry => ({
-  ...page(`${origin} to Riyadh`, "route"), route: { origin, destination: "Riyadh", country, direction: "return" },
+  ...page(`${origin} to Riyadh`, "route"), route: { origin, destination: "Riyadh", country, fromCountry: country, toCountry: "Saudi Arabia", direction: "return" },
+});
+const between = (origin: string, destination: string, fromCountry: Country = "Saudi Arabia", toCountry: Country = "Saudi Arabia"): PageEntry => ({
+  ...page(`${origin} to ${destination}`, "route"),
+  route: { origin, destination, country: fromCountry === "Saudi Arabia" ? toCountry : fromCountry, fromCountry, toCountry, direction: "between" },
 });
 
 export const registry = {
@@ -61,8 +68,7 @@ export const registry = {
   "/services/": page("All Services", "service"),
   "/services/private-transportation/": page("Private Transportation", "service"),
   "/services/intercity-transfers/": page("Intercity Transfers", "service"),
-  // noindex until at least one airport is confirmed
-  "/services/airport-transfers/": page("Airport Transfers", "service", "published", false),
+  "/services/airport-transfers/": page("Airport Transfers", "service"),
   "/services/business-transportation/": page("Business Transportation", "service"),
   "/services/family-transportation/": page("Family Transportation", "service"),
 
@@ -84,6 +90,12 @@ export const registry = {
   "/saudi-arabia/jeddah-to-riyadh/": back("Jeddah"),
   "/saudi-arabia/makkah-to-riyadh/": back("Makkah"),
   "/saudi-arabia/madinah-to-riyadh/": back("Madinah"),
+  "/saudi-arabia/jeddah-to-makkah/": between("Jeddah", "Makkah"),
+  "/saudi-arabia/makkah-to-jeddah/": between("Makkah", "Jeddah"),
+  "/saudi-arabia/makkah-to-madinah/": between("Makkah", "Madinah"),
+  "/saudi-arabia/madinah-to-makkah/": between("Madinah", "Makkah"),
+  "/saudi-arabia/jeddah-to-madinah/": between("Jeddah", "Madinah"),
+  "/saudi-arabia/madinah-to-jeddah/": between("Madinah", "Jeddah"),
 
   // International
   "/international-transfers/": page("International Transfers", "directory"),
@@ -99,6 +111,8 @@ export const registry = {
   "/international-transfers/abu-dhabi-to-riyadh/": back("Abu Dhabi", "United Arab Emirates"),
   "/international-transfers/kuwait-to-riyadh/": back("Kuwait", "Kuwait"),
   "/international-transfers/muscat-to-riyadh/": back("Muscat", "Oman"),
+  "/international-transfers/dammam-to-bahrain/": between("Dammam", "Bahrain", "Saudi Arabia", "Bahrain"),
+  "/international-transfers/bahrain-to-dammam/": between("Bahrain", "Dammam", "Bahrain", "Saudi Arabia"),
 
   // Future destination directory (reserved)
   "/international-transfers/bahrain/": reserved("Bahrain"),
@@ -108,11 +122,11 @@ export const registry = {
   "/international-transfers/oman/": reserved("Oman"),
 
   // Airports (publish only after coverage is confirmed)
-  "/services/airport-transfers/riyadh-airport/": airport("Riyadh Airport (RUH)"),
-  "/services/airport-transfers/dammam-airport/": airport("Dammam Airport (DMM)"),
+  "/services/airport-transfers/riyadh-airport/": airport("Riyadh Airport (RUH)", "published"),
+  "/services/airport-transfers/dammam-airport/": airport("Dammam Airport (DMM)", "published"),
   "/services/airport-transfers/qassim-airport/": airport("Qassim Airport (ELQ)"),
-  "/services/airport-transfers/jeddah-airport/": airport("Jeddah Airport (JED)"),
-  "/services/airport-transfers/madinah-airport/": airport("Madinah Airport (MED)"),
+  "/services/airport-transfers/jeddah-airport/": airport("Jeddah Airport (JED)", "published"),
+  "/services/airport-transfers/madinah-airport/": airport("Madinah Airport (MED)", "published"),
   "/services/airport-transfers/bahrain-airport/": airport("Bahrain Airport (BAH)"),
   "/services/airport-transfers/doha-airport/": airport("Doha Airport (DOH)"),
   "/services/airport-transfers/dubai-airport/": airport("Dubai Airport (DXB)"),
@@ -133,6 +147,7 @@ export type PagePath = keyof typeof registry;
 export type SaudiRoutePath = Extract<PagePath, `/saudi-arabia/${string}-to-${string}/`>;
 export type InternationalRoutePath = Extract<PagePath, `/international-transfers/${string}-to-${string}/`>;
 export type RoutePath = SaudiRoutePath | InternationalRoutePath;
+export type AirportPath = Extract<PagePath, `/services/airport-transfers/${string}-airport/`>;
 
 export const allPaths = Object.keys(registry) as PagePath[];
 export const getPage = (path: PagePath): PageEntry => registry[path];

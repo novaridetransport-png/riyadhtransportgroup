@@ -7,9 +7,10 @@ export function RouteDirectory({ directory }: { directory: "/saudi-arabia/" | "/
   const groups = [
     { title: "From Riyadh", paths: publishedRoutes(directory, "outbound") },
     { title: "To Riyadh", paths: publishedRoutes(directory, "return") },
-  ];
+    { title: "Other routes", paths: publishedRoutes(directory, "between") },
+  ].filter((g) => g.paths.length > 0);
   return (
-    <div className="shell grid gap-12 py-14 lg:grid-cols-2 lg:gap-20 lg:py-20">
+    <div className="shell grid gap-12 py-14 lg:grid-cols-2 lg:gap-x-20 lg:py-20">
       {groups.map((g) => (
         <section key={g.title} aria-label={g.title}>
           <h2 className="border-b-2 border-gold pb-4 text-2xl">{g.title}</h2>

@@ -18,6 +18,6 @@ export const featuredInternational: FeaturedRoute[] = [
 
 /** Place suggestions in the booking form (free text is also accepted). */
 export const placeSuggestions = [
-  "Riyadh", "Dammam", "Khobar", "Qassim", "Buraydah", "Unaizah", "Jeddah", "Makkah", "Madinah",
+  "Riyadh", "King Khalid International Airport (RUH)", "King Abdulaziz International Airport (JED)", "Prince Mohammad bin Abdulaziz Airport (MED)", "King Fahd International Airport (DMM)", "Dammam", "Khobar", "Qassim", "Buraydah", "Unaizah", "Jeddah", "Makkah", "Madinah",
   "Bahrain", "Doha", "Dubai", "Abu Dhabi", "Kuwait City", "Muscat",
 ];
