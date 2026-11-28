@@ -46,7 +46,9 @@ export const defaultSettings: Settings = {
     phone: "", email: "info@riyadhtransportgroup.com", website: "riyadhtransportgroup.com",
   },
   currency: "SAR",
-  quotationTerms: "", invoiceTerms: "", receiptTerms: "", paymentDetails: "",
+  quotationTerms: "Free cancellation until 24 hours before pickup. Later cancellations and no-shows may be charged. Payment is made after the journey, to the driver, by cash, bank transfer, card (Mada, Apple Pay) or STC Pay. Full terms: riyadhtransportgroup.com/terms-and-conditions/",
+  invoiceTerms: "Payment is made to the driver after the journey by cash, bank transfer, card (Mada, Apple Pay) or STC Pay.",
+  receiptTerms: "", paymentDetails: "",
   footer: "Transportation is arranged through independent drivers and transport partners.",
 };
 

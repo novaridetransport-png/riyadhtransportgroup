@@ -57,10 +57,11 @@ export const faqGroups: FaqGroup[] = [
     title: "Fares, payment and documents",
     items: [
       ["How is the fare worked out?", "It depends on the exact pickup and drop-off, the vehicle category, the date and anything extra such as waiting, stops or a return. There is no single price per city."],
-      ["Does sending a request cost anything?", "No. You only pay after you have agreed to the vehicle and fare."],
+      ["When and how do I pay?", "After the journey, to the driver, by cash, bank transfer, card (including Mada and Apple Pay) or STC Pay. The available method is confirmed with your fare. Sending a request costs nothing."],
       ["Can I get a quotation, invoice or receipt?", "Yes. Ask for a quotation before you decide. Invoices and receipts can be emailed to you as PDF files."],
-      ["Can I change or cancel?", "Tell us as early as possible. Ask for the change and cancellation terms that apply, and read them before you confirm."],
+      ["Can I change or cancel?", "Cancellation is free until 24 hours before pickup. Later cancellations and no-shows may be charged, as stated in your quotation. Changes depend on availability and may change the fare."],
     ],
+    links: [["/cancellation-policy/", "Cancellation policy"], ["/terms-and-conditions/", "Terms and conditions"]],
   },
   {
     title: "Your details",
@@ -69,5 +70,6 @@ export const faqGroups: FaqGroup[] = [
       ["How do I ask for my details to be deleted?", "Email info@riyadhtransportgroup.com."],
     ],
     links: [["/privacy-policy/", "Privacy policy"]],
+
   },
 ];

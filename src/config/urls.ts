@@ -54,8 +54,8 @@ export const registry = {
   "/faqs/": main("Frequently Asked Questions", "published"),
   "/book-transport/": main("Book Your Ride", "published", false),
   "/privacy-policy/": main("Privacy Policy", "published"),
-  "/terms-and-conditions/": main("Terms & Conditions"),
-  "/cancellation-policy/": main("Cancellation Policy"),
+  "/terms-and-conditions/": main("Terms & Conditions", "published"),
+  "/cancellation-policy/": main("Cancellation Policy", "published"),
 
   // Services
   "/services/": page("All Services", "service"),
